@@ -505,12 +505,12 @@ input.outline-btn {
             width: 100%;
             color: #fff;
             bottom: 0;
-            padding: 20px;
+            padding: 10px;
             z-index: 999; }
             /* line 463, site.css.scss */
             .cd-section.services .content .column .row .block .caption h2 {
               color: #ffffff;
-              font-size: 24px;
+              font-size: 22px;
               text-align: left;
               font-weight: 300;
               line-height: 1.1;
@@ -518,7 +518,7 @@ input.outline-btn {
               padding: 0px 0px 10px 0px; }
             /* line 472, site.css.scss */
             .cd-section.services .content .column .row .block .caption p {
-              font-size: 16px;
+              font-size: 14px;
               font-weight: 300px;
               color: #ffffff;
               text-align: left;
@@ -731,33 +731,42 @@ header.amenities {
   /* line 672, site.css.scss */
   .interior-content h2 {
     color: #5a6163;
-    font-size: 22px;
+    font-size: 20px;
     text-align: left;
     font-weight: 300;
     line-height: 1.1;
     font-style: normal;
-    padding: 20px 0px 20px 0px; }
+    padding: 60px 0px 10px 0px; }
   /* line 681, site.css.scss */
   .interior-content h3 {
     color: #5a6163;
     font-size: 18px;
     text-align: left;
-    font-weight: 300;
+    font-weight: 600;
     line-height: 1.1;
     font-style: normal;
-    padding: 40px 0px 20px 0px; }
+    padding: 20px 0px 10px 0px; }
   /* line 690, site.css.scss */
+  .interior-content h4 {
+    color: #5a6163;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.1;
+    font-style: normal;
+    padding: 20px 0px 10px 0px; }
+  /* line 699, site.css.scss */
   .interior-content p {
     color: #5a6163;
     font-size: 16px;
     font-weight: 300px;
     text-align: left;
     line-height: 1.2;
-    padding: 0px; }
-  /* line 698, site.css.scss */
+    padding: 10px 0px; }
+  /* line 707, site.css.scss */
   .interior-content ul {
     margin-left: 20px; }
-    /* line 700, site.css.scss */
+    /* line 709, site.css.scss */
     .interior-content ul li {
       list-style: disc;
       color: #5a6163;
@@ -766,31 +775,46 @@ header.amenities {
       text-align: left;
       line-height: 1.2;
       padding: 10px 0px; }
-  /* line 710, site.css.scss */
+      /* line 717, site.css.scss */
+      .interior-content ul li ul li {
+        padding: 10px 0px 0px 0px; }
+  /* line 722, site.css.scss */
   .interior-content img.full-width {
     display: block;
     width: 100%;
     margin: 60px 0px; }
+  /* line 727, site.css.scss */
+  .interior-content img.image-left {
+    display: block;
+    float: left;
+    width: 40%;
+    margin: 15px 15px 15px 0px; }
+  /* line 733, site.css.scss */
+  .interior-content img.image-right {
+    display: block;
+    float: right;
+    width: 40%;
+    margin: 15px 0px 15px 15px; }
 
-/* line 716, site.css.scss */
+/* line 740, site.css.scss */
 .interior-cta {
   display: block;
   width: 100%;
   background: #fafafa; }
-  /* line 720, site.css.scss */
+  /* line 744, site.css.scss */
   .interior-cta .content {
     display: table;
     padding: 60px 40px;
     margin: 0px auto;
     max-width: 1000px; }
-    /* line 725, site.css.scss */
+    /* line 749, site.css.scss */
     .interior-cta .content .column {
       display: table-cell;
       text-align: left;
       vertical-align: middle;
       width: 50%;
       padding: 0px 20px 0px 40px; }
-      /* line 731, site.css.scss */
+      /* line 755, site.css.scss */
       .interior-cta .content .column h2 {
         color: #a2a9ac;
         font-size: 30px;
@@ -799,23 +823,23 @@ header.amenities {
         line-height: 1.1;
         font-style: normal;
         padding: 0px 20px; }
-      /* line 740, site.css.scss */
+      /* line 764, site.css.scss */
       .interior-cta .content .column p {
         font-size: 16px;
         font-weight: 300px;
         color: #5a6163;
         text-align: left;
         line-height: 1.2; }
-        /* line 746, site.css.scss */
+        /* line 770, site.css.scss */
         .interior-cta .content .column p.mousetext {
           font-size: 14px;
           font-style: italic; }
-      /* line 751, site.css.scss */
+      /* line 775, site.css.scss */
       .interior-cta .content .column:first-of-type {
         border-right: 1px solid #ddd;
         padding: 0px 20px 0px 10px; }
 
-/* line 758, site.css.scss */
+/* line 782, site.css.scss */
 footer {
   display: block;
   width: 85%;
@@ -824,92 +848,103 @@ footer {
   line-height: 1.5;
   margin: 40px auto;
   text-align: right; }
-  /* line 766, site.css.scss */
+  /* line 790, site.css.scss */
   footer a {
     font-size: 16px;
     color: #2a2a2a;
     padding: 0px 10px; }
-    /* line 770, site.css.scss */
+    /* line 794, site.css.scss */
     footer a:last-of-type {
       padding: 0px 0px 0px 10px; }
-    /* line 773, site.css.scss */
+    /* line 797, site.css.scss */
     footer a:hover {
       text-decoration: underline; }
 
+@media (max-width: 1200px) {
+  /* line 809, site.css.scss */
+  .cd-section.services .content .column .row .block .caption {
+    padding: 10px; }
+    /* line 811, site.css.scss */
+    .cd-section.services .content .column .row .block .caption h2 {
+      font-size: 18px; }
+    /* line 814, site.css.scss */
+    .cd-section.services .content .column .row .block .caption p {
+      font-size: 12px; } }
 @media (max-width: 1000px) {
-  /* line 779, site.css.scss */
+  /* line 826, site.css.scss */
   a.outline-btn {
     font-size: 20px; }
-    /* line 781, site.css.scss */
+    /* line 828, site.css.scss */
     a.outline-btn.small {
       font-size: 16px; }
 
-  /* line 785, site.css.scss */
+  /* line 832, site.css.scss */
   input.outline-btn {
     font-size: 20px; }
-    /* line 787, site.css.scss */
+    /* line 834, site.css.scss */
     input.outline-btn.small {
       font-size: 16px; }
 
-  /* line 795, site.css.scss */
+  /* line 842, site.css.scss */
   .cd-section.contact .content .column h2 {
     font-size: 28px; }
-  /* line 798, site.css.scss */
+  /* line 845, site.css.scss */
   .cd-section.contact .content .column p {
     font-size: 16px; }
-  /* line 801, site.css.scss */
+  /* line 848, site.css.scss */
   .cd-section.contact .content .column h3 {
     font-size: 18px; }
-  /* line 804, site.css.scss */
+  /* line 851, site.css.scss */
   .cd-section.contact .content .column input[type=email], .cd-section.contact .content .column textarea {
     font-size: 16px; }
-  /* line 811, site.css.scss */
+  /* line 858, site.css.scss */
   .cd-section.features .content {
     border-spacing: 10px;
     width: 96%; }
-    /* line 815, site.css.scss */
+    /* line 862, site.css.scss */
     .cd-section.features .content .column h2 {
       font-size: 20px; }
-    /* line 818, site.css.scss */
+    /* line 865, site.css.scss */
     .cd-section.features .content .column p {
       font-size: 16px; }
-  /* line 826, site.css.scss */
+  /* line 873, site.css.scss */
   .cd-section.social .content .column {
     width: 85%; }
-    /* line 828, site.css.scss */
+    /* line 875, site.css.scss */
     .cd-section.social .content .column h2 {
       font-size: 28px; }
-  /* line 837, site.css.scss */
+  /* line 884, site.css.scss */
   .cd-section.about .content .column h2 {
     font-size: 28px; }
-  /* line 840, site.css.scss */
+  /* line 887, site.css.scss */
   .cd-section.about .content .column p {
     font-size: 16px; }
-    /* line 842, site.css.scss */
+    /* line 889, site.css.scss */
     .cd-section.about .content .column p.mousetext {
       font-size: 16px; }
 
-  /* line 850, site.css.scss */
+  /* line 897, site.css.scss */
   .interior-content {
     display: block;
     width: 85%;
     max-width: 900px;
     margin: 0px auto; }
-    /* line 855, site.css.scss */
+    /* line 902, site.css.scss */
     .interior-content h1 {
       font-size: 28px; }
-    /* line 858, site.css.scss */
+    /* line 905, site.css.scss */
     .interior-content h2 {
-      font-size: 20px; }
-    /* line 861, site.css.scss */
+      font-size: 20px;
+      padding: 40px 0px 10px 0px; }
+    /* line 909, site.css.scss */
     .interior-content h3 {
       font-size: 18px; }
 
-  /* line 868, site.css.scss */
+  /* line 916, site.css.scss */
   .interior-cta .content .column h2 {
     font-size: 28px; } }
 @media (max-width: 750px) {
-  /* line 877, site.css.scss */
+  /* line 925, site.css.scss */
   .overlay nav {
     position: relative;
     height: 70%;
@@ -917,7 +952,7 @@ footer {
     transform: translateY(-50%);
     font-size: 30px;
     text-align: center; }
-  /* line 885, site.css.scss */
+  /* line 933, site.css.scss */
   .overlay ul {
     list-style: none;
     padding: 0;
@@ -925,7 +960,7 @@ footer {
     display: inline-block;
     position: relative;
     height: 100%; }
-    /* line 892, site.css.scss */
+    /* line 940, site.css.scss */
     .overlay ul li {
       display: block;
       height: 25%;
@@ -933,7 +968,7 @@ footer {
       min-height: 50px;
       position: relative;
       opacity: 0; }
-      /* line 899, site.css.scss */
+      /* line 947, site.css.scss */
       .overlay ul li a {
         display: block;
         position: relative;
@@ -941,67 +976,67 @@ footer {
         text-decoration: none;
         overflow: hidden;
         transition: all 0.5s ease; }
-        /* line 906, site.css.scss */
+        /* line 954, site.css.scss */
         .overlay ul li a:hover {
           color: #000000; }
-        /* line 909, site.css.scss */
+        /* line 957, site.css.scss */
         .overlay ul li a.active {
           color: #000000; }
 
-  /* line 917, site.css.scss */
+  /* line 965, site.css.scss */
   .logo-home {
     display: none; }
 
-  /* line 920, site.css.scss */
+  /* line 968, site.css.scss */
   .button_container.home, .button_container {
     top: 35px;
     left: 7.5%; }
 
-  /* line 924, site.css.scss */
+  /* line 972, site.css.scss */
   .cd-section {
     width: calc(100%);
     margin-left: 0px;
     min-height: inherit; }
-    /* line 929, site.css.scss */
+    /* line 977, site.css.scss */
     .cd-section.video .content {
       min-height: inherit;
       display: block;
       width: calc(100%);
       margin-left: 0px; }
-    /* line 936, site.css.scss */
+    /* line 984, site.css.scss */
     .cd-section.social {
       background: #ffffff; }
-    /* line 940, site.css.scss */
+    /* line 988, site.css.scss */
     .cd-section.contact .content {
       width: 95%;
       height: inherit; }
-      /* line 943, site.css.scss */
+      /* line 991, site.css.scss */
       .cd-section.contact .content .column {
         display: block;
         width: 100%;
         height: auto;
         padding: 20px 10px; }
-        /* line 948, site.css.scss */
+        /* line 996, site.css.scss */
         .cd-section.contact .content .column:first-of-type {
           padding: 0px;
           height: 200px; }
-        /* line 952, site.css.scss */
+        /* line 1000, site.css.scss */
         .cd-section.contact .content .column #map {
           display: block;
           width: 100%;
           height: 100%; }
-    /* line 961, site.css.scss */
+    /* line 1009, site.css.scss */
     .cd-section.features .content {
       display: block;
       border-collapse: separate;
       border-spacing: 20px;
       max-width: 1200px;
       width: 95%; }
-      /* line 967, site.css.scss */
+      /* line 1015, site.css.scss */
       .cd-section.features .content .column {
         display: block;
         margin: 20px 0px; }
-    /* line 974, site.css.scss */
+    /* line 1022, site.css.scss */
     .cd-section.social .content {
       display: block;
       padding: 60px 40px;
@@ -1009,7 +1044,7 @@ footer {
       height: auto;
       max-width: auto;
       width: 100%; }
-      /* line 981, site.css.scss */
+      /* line 1029, site.css.scss */
       .cd-section.social .content .column {
         display: block;
         vertical-align: middle;
@@ -1017,13 +1052,13 @@ footer {
         padding: 0px;
         height: auto;
         text-align: center; }
-        /* line 988, site.css.scss */
+        /* line 1036, site.css.scss */
         .cd-section.social .content .column h2 {
           text-align: center; }
-        /* line 991, site.css.scss */
+        /* line 1039, site.css.scss */
         .cd-section.social .content .column:first-of-type {
           width: 100%; }
-          /* line 993, site.css.scss */
+          /* line 1041, site.css.scss */
           .cd-section.social .content .column:first-of-type a {
             display: inline-block;
             width: 75px;
@@ -1035,13 +1070,13 @@ footer {
             cursor: pointer;
             cursor: hand;
             transition: all 0.5s ease; }
-            /* line 1004, site.css.scss */
+            /* line 1052, site.css.scss */
             .cd-section.social .content .column:first-of-type a i {
               margin: 10px 0px 0px 0px; }
-            /* line 1007, site.css.scss */
+            /* line 1055, site.css.scss */
             .cd-section.social .content .column:first-of-type a:hover {
               background: rgba(205, 222, 237, 0.1); }
-    /* line 1016, site.css.scss */
+    /* line 1064, site.css.scss */
     .cd-section.services .content {
       display: block;
       padding: 20px 0px 30px 0px;
@@ -1049,7 +1084,7 @@ footer {
       height: auto;
       max-width: auto;
       width: 95%; }
-      /* line 1023, site.css.scss */
+      /* line 1071, site.css.scss */
       .cd-section.services .content .column {
         display: block;
         text-align: left;
@@ -1057,17 +1092,17 @@ footer {
         width: 100%;
         padding: 0px;
         height: 500px; }
-        /* line 1030, site.css.scss */
+        /* line 1078, site.css.scss */
         .cd-section.services .content .column:first-of-type {
           margin-bottom: 20px; }
-        /* line 1033, site.css.scss */
+        /* line 1081, site.css.scss */
         .cd-section.services .content .column .row {
           display: table;
           height: 33.33333333333333%;
           width: calc(100% + 5px);
           border-collapse: separate;
           border-spacing: 10px 5px; }
-          /* line 1039, site.css.scss */
+          /* line 1087, site.css.scss */
           .cd-section.services .content .column .row .block {
             display: table-cell;
             height: 100%;
@@ -1076,7 +1111,7 @@ footer {
             position: relative;
             background: #000;
             vertical-align: middle; }
-            /* line 1047, site.css.scss */
+            /* line 1095, site.css.scss */
             .cd-section.services .content .column .row .block .caption {
               display: none;
               position: absolute;
@@ -1085,7 +1120,7 @@ footer {
               bottom: 0;
               padding: 20px;
               z-index: 999; }
-              /* line 1055, site.css.scss */
+              /* line 1103, site.css.scss */
               .cd-section.services .content .column .row .block .caption h2 {
                 color: #ffffff;
                 font-size: 16px;
@@ -1094,7 +1129,7 @@ footer {
                 line-height: 1.1;
                 font-style: normal;
                 padding: 0px 0px 10px 0px; }
-              /* line 1064, site.css.scss */
+              /* line 1112, site.css.scss */
               .cd-section.services .content .column .row .block .caption p {
                 font-size: 12px;
                 font-weight: 300px;
@@ -1103,60 +1138,60 @@ footer {
                 line-height: 1.2;
                 max-width: 360px;
                 padding: 0px; }
-    /* line 1079, site.css.scss */
+    /* line 1127, site.css.scss */
     .cd-section.about {
       padding: 20px; }
-      /* line 1081, site.css.scss */
+      /* line 1129, site.css.scss */
       .cd-section.about .content {
         display: block;
         width: 98%; }
-        /* line 1084, site.css.scss */
+        /* line 1132, site.css.scss */
         .cd-section.about .content .column {
           display: block;
           text-align: left;
           vertical-align: middle;
           width: 100%;
           padding: 0px 10px; }
-          /* line 1090, site.css.scss */
+          /* line 1138, site.css.scss */
           .cd-section.about .content .column h2 {
             text-align: left;
             padding: 0px 0px 20px 0px; }
-          /* line 1094, site.css.scss */
+          /* line 1142, site.css.scss */
           .cd-section.about .content .column:first-of-type {
             border-right: none;
             padding: 0px 10px; }
 
-  /* line 1103, site.css.scss */
+  /* line 1151, site.css.scss */
   .interior-cta .content {
     display: block;
     padding: 60px 0px;
     margin: 0px auto;
     width: 85%; }
-    /* line 1108, site.css.scss */
+    /* line 1156, site.css.scss */
     .interior-cta .content .column {
       display: block;
       text-align: left;
       vertical-align: middle;
       width: 100%;
       padding: 0px 0px; }
-      /* line 1114, site.css.scss */
+      /* line 1162, site.css.scss */
       .interior-cta .content .column h2 {
         text-align: left;
         padding: 0px 0px 20px 0px; }
-      /* line 1118, site.css.scss */
+      /* line 1166, site.css.scss */
       .interior-cta .content .column:first-of-type {
         border-right: none;
         padding: 0px 0px; }
 
-  /* line 1125, site.css.scss */
+  /* line 1173, site.css.scss */
   .cd-nav-trigger {
     display: none; }
 
-  /* line 1128, site.css.scss */
+  /* line 1176, site.css.scss */
   .no-touch #cd-vertical-nav {
     display: none; }
 
-  /* line 1131, site.css.scss */
+  /* line 1179, site.css.scss */
   footer {
     display: block;
     width: 85%;
@@ -1165,14 +1200,14 @@ footer {
     line-height: 1.5;
     margin: 40px auto;
     text-align: center; }
-    /* line 1139, site.css.scss */
+    /* line 1187, site.css.scss */
     footer a {
       font-size: 16px;
       color: #2a2a2a;
       padding: 0px 10px; }
-      /* line 1143, site.css.scss */
+      /* line 1191, site.css.scss */
       footer a:last-of-type {
         padding: 0px 0px 0px 10px; }
-      /* line 1146, site.css.scss */
+      /* line 1194, site.css.scss */
       footer a:hover {
         text-decoration: underline; } }

@@ -8,7 +8,23 @@
     <link href="/stylesheets/instalink-2.0.7.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/a6a7dabae4.js"></script>
     <script src="/javascripts/all.js"></script>
+    <script src="javascripts/jquery-2.1.1.js"></script>
     <script src="javascripts/modernizr.js"></script>
+    <script src="javascripts/jquery.scrollify.js"></script>
+    <script src="/javascripts/instalink-2.0.7.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+        $(window).on("resize", function () {
+          if( $(window).width() > 1000){
+            $(function() {
+              $.scrollify({
+                section : ".cd-section",
+              });
+            });
+          } 
+        }).resize();    
+
+      </script>
   </head>
   <body class="index">
     <div class="logo-home">
@@ -103,7 +119,7 @@
       <div class="row two">
         <div class="block">
           <div class="caption">
-            <h2>Physiotherapy/Chiropractic</h2>
+            <h2>Physiotherapy / Chiropractic</h2>
             <p>5 large treatment rooms with a highly qualified team of physiotherapists.</p>
           </div>
           <div class="inner three"></div>
@@ -190,7 +206,7 @@
         </div>
       </div>
       <div class="row nine">
-        <a href="#" class="outline-btn small">View Amenities&nbsp;></a>
+        <a href="amenities.html" class="outline-btn small">View Amenities&nbsp;></a>
       </div>
     </div>
   </div>
@@ -283,8 +299,5 @@
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVQPRI3akgzRurDSX7F63QC250nogCGLo&callback=initMap" async defer></script>
-  <script src="javascripts/jquery-2.1.1.js"></script>
-    <script src="/javascripts/instalink-2.0.7.js"></script>
-  <script src="javascripts/main.js"></script>
   </body>
 </html>

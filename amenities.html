@@ -8,7 +8,23 @@
     <link href="/stylesheets/instalink-2.0.7.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/a6a7dabae4.js"></script>
     <script src="/javascripts/all.js"></script>
+    <script src="javascripts/jquery-2.1.1.js"></script>
     <script src="javascripts/modernizr.js"></script>
+    <script src="javascripts/jquery.scrollify.js"></script>
+    <script src="/javascripts/instalink-2.0.7.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+        $(window).on("resize", function () {
+          if( $(window).width() > 1000){
+            $(function() {
+              $.scrollify({
+                section : ".cd-section",
+              });
+            });
+          } 
+        }).resize();    
+
+      </script>
   </head>
   <body class="amenities">
     <div id="toggle" class="button_container"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
@@ -29,18 +45,40 @@
 </header>
 <section class="interior-content">
 	<h1>Amenities</h1>
-	<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu massa at augue malesuada interdum. </h2>
-	<p>Donec bibendum mattis bibendum. Phasellus aliquam imperdiet rutrum. Fusce rutrum, erat in aliquet euismod, justo arcu posuere libero, in gravida nulla mauris ac nulla. Cras in semper nunc, ac vestibulum odio. Suspendisse hendrerit sollicitudin lectus eu tristique. Nulla tincidunt arcu et mi ultricies finibus. Ut mollis facilisis neque id tempor.</p>
-	<p>Donec interdum elementum justo eget placerat.</p>
-	<h3>In dignissim condimentum metus nec semper. Aenean a enim purus.</h3>
-		<ul>
-			<li>Praesent interdum nisi neque, sit amet auctor quam</li>
-			<li>bibendum sit amet.</li>
-			<li>Mauris in sem ac massa fringilla eleifend. Mauris fringilla quis urna nec tristique.</li>
-			<li>Phasellus sit amet tortor sed dui molestie laoreet.</li>
-			<li>Aenean molestie scelerisque felis quis pulvinar.</li>
-		</ul>
-		<img src="/images/amenities-placeholder-photo.png" class="full-width"/>
+	<h2>TENNIS COURTS</h2>
+	<h3>DecoTurf Indoor Tennis Courts</h3>
+	<p>You will feel like tennis royalty when you step out onto any one of our four DecoTurf indoor courts. Surrounded by glass, views of Lake Ontario and downtown Toronto and 50-foot ceilings, these indoor courts were designed to make you feel like you’re playing outdoors with the benefits of indoor comfort. Our courts are surfaced by Tennex - the same team responsible for surfacing the courts at the Roger’s Cup every year.</p>
+	<h4>Opportunities for Hotel Guests:</h4>
+	<ul>
+		<li>Tennis Lessons</li>
+		<li>Tennis Clinics
+				<ul>
+					<li>Instructional programs for kids and adults to learn the game of tennis</li>
+				</ul>
+		</li>
+		<li>Tennis Events</li>
+	</ul>
+	<h2>SQUASH COURTS</h2>
+	<h3>9 Glass Back Squash Courts (7 singles & 2 doubles)</h3>
+	<p>Our facility boasts a total of 9 squash courts – 7 International singles courts and 2 North American doubles courts. Each court is constructed by industry leaders McWIL Squash Inc and features composite panel front walls, glass backed walls, as well as hardwood floors with shock-absorbing subfloors.</p>
+	<h4>Opportunities for Hotel Guests:</h4>
+	<ul>
+		<li>Squash Lessons</li>
+		<li>Squash Clinics</li>
+	</ul>
+	<h2>HD GOLF SIMULATORS</h2>
+	<h3>2 HD golf simulators</h3>
+	<img src="/images/gym-placeholder.jpg" class="image-left"/>
+	<p>We have two golf simulators offered from High Definition Golf – the top choice for golf instructors and top golfers around the world. Special image processing software integrates high-resolution digital images, satellite data and geophysical data into three-dimensional models of golf courses that play just like the real course. We offer both instructional and play opportunities to meet all needs. For more information,visit their website - http://hdgolf.com</p>
+	<h2>FITNESS CENTRE</h2>
+	<h3>Equipped by Technogym’s Artis collection</h3>
+	<p>Our fitness centre is lined with top-of-the-line fitness equipment from Technogym’s Artis collection. We offer over 50 machines ranging from cardio, strength and functionality equipment. Each machine is methodically placed to ensure a flawless workout routine. Can’t wait to see these pieces? Get a sneak peak here - http://www.technogym.com/artis/en</p>
+	<h2>STUDIOS</h2>
+	<h3>4 Fitness Studios</h3>
+	<img src="/images/gym-placeholder.jpg" class="image-right"/>
+	<p>At TEN X TORONTO, we have four fitness studios including spinning, hot yoga, pilates and group fitness. Our group fitness classes will include the common fan-favourites such as group power, cardio blast, circuit training and more, as well as a number of proprietary classes. With a large group fitness space, we are flexible to class structures and offerings. It is our promise to be continuously evolving our class offerings to stay up-to-date with the latest trends and to ensure all fitness needs are met. In addition to our hot yoga studio, we offer morning and evening yoga session during the spring and summer months out on our beautiful East Terrace overlooking the downtown core (weather permitting).
+	</p>
+	<img src="/images/amenities-placeholder-photo.png" class="full-width"/>
 </section>
 <section class="interior-cta">
   <div class="content">
@@ -59,8 +97,5 @@
 	<p><a href="#">Contact Us</a>|<a href="#">Members</a>|<a href="#">Careers</a><br/>    
 	© 2016 Ten X Toronto, lorem ipsum dolor sit amet.</p>
 </footer>
-  <script src="javascripts/jquery-2.1.1.js"></script>
-    <script src="/javascripts/instalink-2.0.7.js"></script>
-  <script src="javascripts/main.js"></script>
   </body>
 </html>
