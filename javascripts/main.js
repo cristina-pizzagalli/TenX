@@ -1,4 +1,10 @@
 jQuery(document).ready(function($){
+	
+	$('#toggle').click(function() {
+		$(this).toggleClass('active');
+		$('#overlay').toggleClass('open');
+	});
+
 	var contentSections = $('.cd-section'),
 		navigationItems = $('#cd-vertical-nav a');
 
@@ -46,9 +52,4 @@ jQuery(document).ready(function($){
         	600
         );
 	}
-});
-
-$('#toggle').click(function() {
-	$(this).toggleClass('active');
-	$('#overlay').toggleClass('open');
 });

@@ -363,7 +363,7 @@ input.outline-btn {
       .cd-section.features .content .column {
         display: table-cell;
         background: rgba(255, 255, 255, 0.85);
-        padding: 20px;
+        padding: 20px 20px 110px 20px;
         width: auto; }
         /* line 320, site.css.scss */
         .cd-section.features .content .column img {
@@ -387,15 +387,17 @@ input.outline-btn {
           padding: 0px 10px; }
         /* line 340, site.css.scss */
         .cd-section.features .content .column a.outline-btn {
-          margin: 40px 10px 20px 10px; }
-  /* line 347, site.css.scss */
+          position: absolute;
+          bottom: 30px;
+          margin: 20px 10px; }
+  /* line 349, site.css.scss */
   .cd-section.social .content {
     display: table;
     padding: 60px 40px;
     height: 90vh;
     max-width: auto;
     width: 100%; }
-    /* line 353, site.css.scss */
+    /* line 355, site.css.scss */
     .cd-section.social .content .column {
       display: table-cell;
       text-align: left;
@@ -403,7 +405,7 @@ input.outline-btn {
       width: 90%;
       padding: 0px;
       height: 100%; }
-      /* line 360, site.css.scss */
+      /* line 362, site.css.scss */
       .cd-section.social .content .column h2 {
         color: #000000;
         font-size: 30px;
@@ -412,10 +414,10 @@ input.outline-btn {
         line-height: 1.1;
         font-style: normal;
         padding: 20px 0px 0px 0px; }
-      /* line 369, site.css.scss */
+      /* line 371, site.css.scss */
       .cd-section.social .content .column:first-of-type {
         width: 10%; }
-        /* line 371, site.css.scss */
+        /* line 373, site.css.scss */
         .cd-section.social .content .column:first-of-type a {
           display: block;
           width: 75px;
@@ -427,20 +429,20 @@ input.outline-btn {
           cursor: pointer;
           cursor: hand;
           transition: all 0.5s ease; }
-          /* line 382, site.css.scss */
+          /* line 384, site.css.scss */
           .cd-section.social .content .column:first-of-type a i {
             margin: 10px 0px 0px 0px; }
-          /* line 385, site.css.scss */
+          /* line 387, site.css.scss */
           .cd-section.social .content .column:first-of-type a:hover {
             background: rgba(205, 222, 237, 0.1); }
-  /* line 394, site.css.scss */
+  /* line 396, site.css.scss */
   .cd-section.services .content {
     display: table;
     padding: 60px 40px;
     height: 100vh;
     max-width: auto;
     width: 100%; }
-    /* line 400, site.css.scss */
+    /* line 402, site.css.scss */
     .cd-section.services .content .column {
       display: table-cell;
       text-align: left;
@@ -448,48 +450,48 @@ input.outline-btn {
       width: 33.333%;
       padding: 0px;
       height: 100%; }
-      /* line 407, site.css.scss */
+      /* line 409, site.css.scss */
       .cd-section.services .content .column .row {
         display: table;
         height: 33.33333333333333%;
         width: calc(100% + 10px);
         border-collapse: separate;
         border-spacing: 10px 5px; }
-        /* line 413, site.css.scss */
+        /* line 415, site.css.scss */
         .cd-section.services .content .column .row.one {
           height: 30%; }
-        /* line 416, site.css.scss */
+        /* line 418, site.css.scss */
         .cd-section.services .content .column .row.two {
           height: 60%; }
-        /* line 419, site.css.scss */
+        /* line 421, site.css.scss */
         .cd-section.services .content .column .row.three {
           height: 10%; }
-        /* line 422, site.css.scss */
+        /* line 424, site.css.scss */
         .cd-section.services .content .column .row.four {
           height: 70%; }
-        /* line 425, site.css.scss */
+        /* line 427, site.css.scss */
         .cd-section.services .content .column .row.five {
           height: 30%; }
-        /* line 428, site.css.scss */
+        /* line 430, site.css.scss */
         .cd-section.services .content .column .row.six {
           height: 30%; }
-        /* line 431, site.css.scss */
+        /* line 433, site.css.scss */
         .cd-section.services .content .column .row.seven {
           height: 30%; }
-        /* line 434, site.css.scss */
+        /* line 436, site.css.scss */
         .cd-section.services .content .column .row.eight {
           height: 30%; }
-        /* line 437, site.css.scss */
+        /* line 439, site.css.scss */
         .cd-section.services .content .column .row.nine {
           height: 10%; }
-        /* line 440, site.css.scss */
+        /* line 442, site.css.scss */
         .cd-section.services .content .column .row a {
           width: 100%;
           padding-left: 0px;
           padding-right: 0px;
           margin: 5px auto;
           display: block; }
-        /* line 447, site.css.scss */
+        /* line 449, site.css.scss */
         .cd-section.services .content .column .row .block {
           display: table-cell;
           height: 100%;
@@ -498,7 +500,7 @@ input.outline-btn {
           position: relative;
           background: #000;
           vertical-align: middle; }
-          /* line 455, site.css.scss */
+          /* line 457, site.css.scss */
           .cd-section.services .content .column .row .block .caption {
             display: none;
             position: absolute;
@@ -507,7 +509,7 @@ input.outline-btn {
             bottom: 0;
             padding: 10px;
             z-index: 999; }
-            /* line 463, site.css.scss */
+            /* line 465, site.css.scss */
             .cd-section.services .content .column .row .block .caption h2 {
               color: #ffffff;
               font-size: 22px;
@@ -516,7 +518,7 @@ input.outline-btn {
               line-height: 1.1;
               font-style: normal;
               padding: 0px 0px 10px 0px; }
-            /* line 472, site.css.scss */
+            /* line 474, site.css.scss */
             .cd-section.services .content .column .row .block .caption p {
               font-size: 14px;
               font-weight: 300px;
@@ -525,14 +527,14 @@ input.outline-btn {
               line-height: 1.2;
               max-width: 360px;
               padding: 0px; }
-          /* line 483, site.css.scss */
+          /* line 485, site.css.scss */
           .cd-section.services .content .column .row .block:hover .inner {
             transform: scale(1.1);
             opacity: 0.5; }
-          /* line 489, site.css.scss */
+          /* line 491, site.css.scss */
           .cd-section.services .content .column .row .block:hover .caption {
             display: block; }
-          /* line 493, site.css.scss */
+          /* line 495, site.css.scss */
           .cd-section.services .content .column .row .block .inner {
             display: block;
             width: 100%;
@@ -541,61 +543,61 @@ input.outline-btn {
             background-repeat: no-repeat;
             background-size: cover;
             transition-duration: 0.3s; }
-            /* line 501, site.css.scss */
+            /* line 503, site.css.scss */
             .cd-section.services .content .column .row .block .inner.one {
               background-image: url("/images/bg1.png"); }
-            /* line 504, site.css.scss */
+            /* line 506, site.css.scss */
             .cd-section.services .content .column .row .block .inner.two {
               background-image: url("/images/bg2.png"); }
-            /* line 507, site.css.scss */
+            /* line 509, site.css.scss */
             .cd-section.services .content .column .row .block .inner.three {
               background-image: url("/images/bg3.png"); }
-            /* line 510, site.css.scss */
+            /* line 512, site.css.scss */
             .cd-section.services .content .column .row .block .inner.four {
               background-image: url("/images/bg4.png"); }
-            /* line 513, site.css.scss */
+            /* line 515, site.css.scss */
             .cd-section.services .content .column .row .block .inner.five {
               background-image: url("/images/bg5.png"); }
-            /* line 516, site.css.scss */
+            /* line 518, site.css.scss */
             .cd-section.services .content .column .row .block .inner.six {
               background-image: url("/images/bg6.png"); }
-            /* line 519, site.css.scss */
+            /* line 521, site.css.scss */
             .cd-section.services .content .column .row .block .inner.seven {
               background-image: url("/images/bg7.png"); }
-            /* line 522, site.css.scss */
+            /* line 524, site.css.scss */
             .cd-section.services .content .column .row .block .inner.eight {
               background-image: url("/images/bg8.png"); }
-            /* line 525, site.css.scss */
+            /* line 527, site.css.scss */
             .cd-section.services .content .column .row .block .inner.nine {
               background-image: url("/images/bg9.png"); }
-            /* line 528, site.css.scss */
+            /* line 530, site.css.scss */
             .cd-section.services .content .column .row .block .inner.ten {
               background-image: url("/images/bg10.png"); }
-            /* line 531, site.css.scss */
+            /* line 533, site.css.scss */
             .cd-section.services .content .column .row .block .inner.eleven {
               background-image: url("/images/bg11.png"); }
-            /* line 534, site.css.scss */
+            /* line 536, site.css.scss */
             .cd-section.services .content .column .row .block .inner.twelve {
               background-image: url("/images/bg12.png"); }
-  /* line 543, site.css.scss */
+  /* line 545, site.css.scss */
   .cd-section.about {
     background: url("/images/about-bg.jpg");
     background-size: cover;
     background-attachment: fixed; }
-    /* line 547, site.css.scss */
+    /* line 549, site.css.scss */
     .cd-section.about .content {
       display: table;
       background: rgba(255, 255, 255, 0.85);
       padding: 60px 40px;
       max-width: 1000px; }
-      /* line 552, site.css.scss */
+      /* line 554, site.css.scss */
       .cd-section.about .content .column {
         display: table-cell;
         text-align: left;
         vertical-align: middle;
         width: 50%;
         padding: 0px 20px 0px 40px; }
-        /* line 558, site.css.scss */
+        /* line 560, site.css.scss */
         .cd-section.about .content .column h2 {
           color: #000000;
           font-size: 30px;
@@ -604,27 +606,27 @@ input.outline-btn {
           line-height: 1.1;
           font-style: normal;
           padding: 0px 20px; }
-        /* line 567, site.css.scss */
+        /* line 569, site.css.scss */
         .cd-section.about .content .column p {
           font-size: 16px;
           font-weight: 300px;
           color: #5a6163;
           text-align: left;
           line-height: 1.2; }
-          /* line 573, site.css.scss */
+          /* line 575, site.css.scss */
           .cd-section.about .content .column p.mousetext {
             font-size: 14px;
             font-style: italic; }
-        /* line 578, site.css.scss */
+        /* line 580, site.css.scss */
         .cd-section.about .content .column:first-of-type {
           border-right: 1px solid #ddd;
           padding: 0px 20px 0px 10px; }
 
-/* line 586, site.css.scss */
+/* line 588, site.css.scss */
 .cd-nav-trigger {
   display: none; }
 
-/* line 589, site.css.scss */
+/* line 591, site.css.scss */
 .logo-home {
   display: block;
   top: 25px;
@@ -634,7 +636,7 @@ input.outline-btn {
   position: fixed;
   z-index: 999999; }
 
-/* line 598, site.css.scss */
+/* line 600, site.css.scss */
 .no-touch #cd-vertical-nav {
   position: fixed;
   left: 0px;
@@ -642,16 +644,16 @@ input.outline-btn {
   height: 100%;
   z-index: 1;
   width: 100px; }
-  /* line 605, site.css.scss */
+  /* line 607, site.css.scss */
   .no-touch #cd-vertical-nav ul {
     position: absolute;
     bottom: 40px;
     margin: 0px auto;
     width: 100%; }
-  /* line 611, site.css.scss */
+  /* line 613, site.css.scss */
   .no-touch #cd-vertical-nav li {
     text-align: center; }
-  /* line 614, site.css.scss */
+  /* line 616, site.css.scss */
   .no-touch #cd-vertical-nav a {
     display: inline-block;
     -webkit-backface-visibility: hidden;
@@ -661,7 +663,7 @@ input.outline-btn {
       content: "";
       display: table;
       clear: both; }
-    /* line 618, site.css.scss */
+    /* line 620, site.css.scss */
     .no-touch #cd-vertical-nav a span {
       float: right;
       display: inline-block;
@@ -670,17 +672,17 @@ input.outline-btn {
       -ms-transform: scale(0.6);
       -o-transform: scale(0.6);
       transform: scale(0.6); }
-    /* line 623, site.css.scss */
+    /* line 625, site.css.scss */
     .no-touch #cd-vertical-nav a:hover span {
       -webkit-transform: scale(0.8);
       -moz-transform: scale(0.8);
       -ms-transform: scale(0.8);
       -o-transform: scale(0.8);
       transform: scale(0.8); }
-    /* line 626, site.css.scss */
+    /* line 628, site.css.scss */
     .no-touch #cd-vertical-nav a.is-selected .cd-dot {
       background-color: #000; }
-  /* line 630, site.css.scss */
+  /* line 632, site.css.scss */
   .no-touch #cd-vertical-nav .cd-dot {
     position: relative;
     top: 8px;
@@ -697,38 +699,48 @@ input.outline-btn {
     -o-transform-origin: 50% 50%;
     transform-origin: 50% 50%; }
 
-/* line 643, site.css.scss */
-header.amenities {
+/* line 645, site.css.scss */
+header {
   border-top: 100px solid #ffffff;
   display: block;
   width: 100%;
   height: auto;
   padding: 100px 0px;
   text-align: center;
-  background: url("/images/amenities-bg.jpg");
-  background-size: cover;
+  background: url("/images/amenities-bg.jpg") no-repeat;
+  background-size: 100%;
   background-attachment: fixed; }
-  /* line 653, site.css.scss */
-  header.amenities img {
+  /* line 655, site.css.scss */
+  header img {
     width: 70%;
     max-width: 300px; }
+  /* line 659, site.css.scss */
+  header.amenities {
+    background: url("/images/amenities-bg.jpg") no-repeat;
+    background-size: 100%;
+    background-attachment: fixed; }
+  /* line 664, site.css.scss */
+  header.team {
+    background: url("/images/features-bg.jpg") no-repeat;
+    background-size: 100%;
+    background-attachment: fixed; }
 
-/* line 658, site.css.scss */
+/* line 670, site.css.scss */
 .interior-content {
   display: block;
   width: 85%;
   max-width: 900px;
   margin: 40px auto; }
-  /* line 663, site.css.scss */
+  /* line 675, site.css.scss */
   .interior-content h1 {
-    color: #a2a9ac;
+    color: #000;
     font-size: 36px;
     text-align: left;
     font-weight: 300;
     line-height: 1.1;
     font-style: normal;
-    padding: 40px 0px 20px 0px; }
-  /* line 672, site.css.scss */
+    padding: 40px 0px 40px 0px; }
+  /* line 684, site.css.scss */
   .interior-content h2 {
     color: #5a6163;
     font-size: 20px;
@@ -736,8 +748,8 @@ header.amenities {
     font-weight: 300;
     line-height: 1.1;
     font-style: normal;
-    padding: 60px 0px 10px 0px; }
-  /* line 681, site.css.scss */
+    padding: 0px 0px 10px 0px; }
+  /* line 693, site.css.scss */
   .interior-content h3 {
     color: #5a6163;
     font-size: 18px;
@@ -746,7 +758,7 @@ header.amenities {
     line-height: 1.1;
     font-style: normal;
     padding: 20px 0px 10px 0px; }
-  /* line 690, site.css.scss */
+  /* line 702, site.css.scss */
   .interior-content h4 {
     color: #5a6163;
     font-size: 14px;
@@ -755,7 +767,7 @@ header.amenities {
     line-height: 1.1;
     font-style: normal;
     padding: 20px 0px 10px 0px; }
-  /* line 699, site.css.scss */
+  /* line 711, site.css.scss */
   .interior-content p {
     color: #5a6163;
     font-size: 16px;
@@ -763,10 +775,10 @@ header.amenities {
     text-align: left;
     line-height: 1.2;
     padding: 10px 0px; }
-  /* line 707, site.css.scss */
+  /* line 719, site.css.scss */
   .interior-content ul {
     margin-left: 20px; }
-    /* line 709, site.css.scss */
+    /* line 721, site.css.scss */
     .interior-content ul li {
       list-style: disc;
       color: #5a6163;
@@ -775,46 +787,165 @@ header.amenities {
       text-align: left;
       line-height: 1.2;
       padding: 10px 0px; }
-      /* line 717, site.css.scss */
+      /* line 729, site.css.scss */
       .interior-content ul li ul li {
         padding: 10px 0px 0px 0px; }
-  /* line 722, site.css.scss */
+  /* line 735, site.css.scss */
+  .interior-content.team h2 {
+    display: block;
+    padding-top: 40px;
+    margin-top: 40px;
+    padding-bottom: 60px;
+    border-top: 1px solid #ddd; }
+  /* line 742, site.css.scss */
+  .interior-content.team img {
+    border-radius: 50%;
+    width: 150px; }
+  /* line 746, site.css.scss */
+  .interior-content.team h2 {
+    display: block;
+    clear: both; }
+  /* line 750, site.css.scss */
+  .interior-content.team .team-row {
+    display: block;
+    clear: both;
+    width: 100%; }
+    /* line 754, site.css.scss */
+    .interior-content.team .team-row .column {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 50%;
+      padding: 0px 20px 40px 20px; }
+      /* line 760, site.css.scss */
+      .interior-content.team .team-row .column h3 {
+        text-align: center; }
+    /* line 766, site.css.scss */
+    .interior-content.team .team-row:first-of-type .column {
+      width: 100%; }
+      /* line 768, site.css.scss */
+      .interior-content.team .team-row:first-of-type .column img {
+        width: 225px; }
+  /* line 776, site.css.scss */
+  .interior-content.amenities .amenities-row {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid #ddd;
+    display: table;
+    height: 350px; }
+    /* line 782, site.css.scss */
+    .interior-content.amenities .amenities-row:last-of-type {
+      border-bottom: none; }
+    /* line 785, site.css.scss */
+    .interior-content.amenities .amenities-row .column {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle; }
+      /* line 792, site.css.scss */
+      .interior-content.amenities .amenities-row .column:first-of-type {
+        width: 30%;
+        background-color: #000; }
+      /* line 796, site.css.scss */
+      .interior-content.amenities .amenities-row .column:last-of-type {
+        padding: 40px; }
+      /* line 799, site.css.scss */
+      .interior-content.amenities .amenities-row .column .caption {
+        display: none;
+        position: absolute;
+        width: 100%;
+        color: #fff;
+        bottom: 0;
+        padding: 20px;
+        z-index: 999; }
+        /* line 807, site.css.scss */
+        .interior-content.amenities .amenities-row .column .caption h2 {
+          color: #ffffff;
+          font-size: 20px;
+          text-align: left;
+          font-weight: 300;
+          line-height: 1.1;
+          font-style: normal;
+          padding: 0px 0px 10px 0px; }
+      /* line 818, site.css.scss */
+      .interior-content.amenities .amenities-row .column:hover .inner {
+        transform: scale(1.1);
+        opacity: 0.5; }
+      /* line 824, site.css.scss */
+      .interior-content.amenities .amenities-row .column:hover .caption {
+        display: block; }
+      /* line 828, site.css.scss */
+      .interior-content.amenities .amenities-row .column .inner {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        transition-duration: 0.3s; }
+        /* line 838, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.tennis {
+          background-image: url("/images/bg4.png"); }
+        /* line 841, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.squash {
+          background-image: url("/images/bg14.png"); }
+        /* line 844, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.golf {
+          background-image: url("/images/bg10.png"); }
+        /* line 847, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.fitness {
+          background-image: url("/images/bg7.png"); }
+        /* line 850, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.studios {
+          background-image: url("/images/features-2.png"); }
+        /* line 853, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.swimming {
+          background-image: url("/images/bg13.png"); }
+        /* line 856, site.css.scss */
+        .interior-content.amenities .amenities-row .column .inner.members {
+          background-image: url("/images/bg5.png"); }
+  /* line 863, site.css.scss */
   .interior-content img.full-width {
     display: block;
     width: 100%;
     margin: 60px 0px; }
-  /* line 727, site.css.scss */
+  /* line 868, site.css.scss */
   .interior-content img.image-left {
     display: block;
     float: left;
     width: 40%;
     margin: 15px 15px 15px 0px; }
-  /* line 733, site.css.scss */
+  /* line 874, site.css.scss */
   .interior-content img.image-right {
     display: block;
     float: right;
     width: 40%;
     margin: 15px 0px 15px 15px; }
 
-/* line 740, site.css.scss */
+/* line 881, site.css.scss */
 .interior-cta {
   display: block;
   width: 100%;
+  clear: both;
   background: #fafafa; }
-  /* line 744, site.css.scss */
+  /* line 886, site.css.scss */
   .interior-cta .content {
     display: table;
     padding: 60px 40px;
     margin: 0px auto;
     max-width: 1000px; }
-    /* line 749, site.css.scss */
+    /* line 891, site.css.scss */
     .interior-cta .content .column {
       display: table-cell;
       text-align: left;
       vertical-align: middle;
       width: 50%;
       padding: 0px 20px 0px 40px; }
-      /* line 755, site.css.scss */
+      /* line 897, site.css.scss */
       .interior-cta .content .column h2 {
         color: #a2a9ac;
         font-size: 30px;
@@ -823,23 +954,23 @@ header.amenities {
         line-height: 1.1;
         font-style: normal;
         padding: 0px 20px; }
-      /* line 764, site.css.scss */
+      /* line 906, site.css.scss */
       .interior-cta .content .column p {
         font-size: 16px;
         font-weight: 300px;
         color: #5a6163;
         text-align: left;
         line-height: 1.2; }
-        /* line 770, site.css.scss */
+        /* line 912, site.css.scss */
         .interior-cta .content .column p.mousetext {
           font-size: 14px;
           font-style: italic; }
-      /* line 775, site.css.scss */
+      /* line 917, site.css.scss */
       .interior-cta .content .column:first-of-type {
         border-right: 1px solid #ddd;
         padding: 0px 20px 0px 10px; }
 
-/* line 782, site.css.scss */
+/* line 924, site.css.scss */
 footer {
   display: block;
   width: 85%;
@@ -848,103 +979,205 @@ footer {
   line-height: 1.5;
   margin: 40px auto;
   text-align: right; }
-  /* line 790, site.css.scss */
+  /* line 932, site.css.scss */
   footer a {
     font-size: 16px;
     color: #2a2a2a;
     padding: 0px 10px; }
-    /* line 794, site.css.scss */
+    /* line 936, site.css.scss */
     footer a:last-of-type {
       padding: 0px 0px 0px 10px; }
-    /* line 797, site.css.scss */
+    /* line 939, site.css.scss */
     footer a:hover {
       text-decoration: underline; }
 
 @media (max-width: 1200px) {
-  /* line 809, site.css.scss */
+  /* line 951, site.css.scss */
   .cd-section.services .content .column .row .block .caption {
     padding: 10px; }
-    /* line 811, site.css.scss */
+    /* line 953, site.css.scss */
     .cd-section.services .content .column .row .block .caption h2 {
       font-size: 18px; }
-    /* line 814, site.css.scss */
+    /* line 956, site.css.scss */
     .cd-section.services .content .column .row .block .caption p {
       font-size: 12px; } }
 @media (max-width: 1000px) {
-  /* line 826, site.css.scss */
+  /* line 969, site.css.scss */
+  .interior-content h1 {
+    font-size: 36px; }
+  /* line 972, site.css.scss */
+  .interior-content h2 {
+    font-size: 20px; }
+  /* line 975, site.css.scss */
+  .interior-content p {
+    font-size: 16px; }
+  /* line 979, site.css.scss */
+  .interior-content.amenities .amenities-row {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid #ddd;
+    display: table;
+    height: 350px; }
+    /* line 985, site.css.scss */
+    .interior-content.amenities .amenities-row:last-of-type {
+      border-bottom: none; }
+    /* line 988, site.css.scss */
+    .interior-content.amenities .amenities-row .column {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle; }
+      /* line 995, site.css.scss */
+      .interior-content.amenities .amenities-row .column:first-of-type {
+        width: 50%;
+        background-color: #000; }
+      /* line 999, site.css.scss */
+      .interior-content.amenities .amenities-row .column:last-of-type {
+        padding: 40px; }
+      /* line 1003, site.css.scss */
+      .interior-content.amenities .amenities-row .column .caption h2 {
+        font-size: 20px; }
+
+  /* line 1011, site.css.scss */
   a.outline-btn {
     font-size: 20px; }
-    /* line 828, site.css.scss */
+    /* line 1013, site.css.scss */
     a.outline-btn.small {
       font-size: 16px; }
 
-  /* line 832, site.css.scss */
+  /* line 1017, site.css.scss */
   input.outline-btn {
     font-size: 20px; }
-    /* line 834, site.css.scss */
+    /* line 1019, site.css.scss */
     input.outline-btn.small {
       font-size: 16px; }
 
-  /* line 842, site.css.scss */
+  /* line 1027, site.css.scss */
   .cd-section.contact .content .column h2 {
     font-size: 28px; }
-  /* line 845, site.css.scss */
+  /* line 1030, site.css.scss */
   .cd-section.contact .content .column p {
     font-size: 16px; }
-  /* line 848, site.css.scss */
+  /* line 1033, site.css.scss */
   .cd-section.contact .content .column h3 {
     font-size: 18px; }
-  /* line 851, site.css.scss */
+  /* line 1036, site.css.scss */
   .cd-section.contact .content .column input[type=email], .cd-section.contact .content .column textarea {
     font-size: 16px; }
-  /* line 858, site.css.scss */
+  /* line 1043, site.css.scss */
   .cd-section.features .content {
     border-spacing: 10px;
     width: 96%; }
-    /* line 862, site.css.scss */
-    .cd-section.features .content .column h2 {
-      font-size: 20px; }
-    /* line 865, site.css.scss */
-    .cd-section.features .content .column p {
-      font-size: 16px; }
-  /* line 873, site.css.scss */
+    /* line 1046, site.css.scss */
+    .cd-section.features .content .column {
+      padding: 20px; }
+      /* line 1048, site.css.scss */
+      .cd-section.features .content .column h2 {
+        font-size: 20px; }
+      /* line 1051, site.css.scss */
+      .cd-section.features .content .column p {
+        font-size: 16px; }
+      /* line 1054, site.css.scss */
+      .cd-section.features .content .column a.outline-btn {
+        position: relative;
+        margin: 60px 10px 0px 10px; }
+  /* line 1063, site.css.scss */
   .cd-section.social .content .column {
     width: 85%; }
-    /* line 875, site.css.scss */
+    /* line 1065, site.css.scss */
     .cd-section.social .content .column h2 {
       font-size: 28px; }
-  /* line 884, site.css.scss */
+  /* line 1074, site.css.scss */
   .cd-section.about .content .column h2 {
     font-size: 28px; }
-  /* line 887, site.css.scss */
+  /* line 1077, site.css.scss */
   .cd-section.about .content .column p {
     font-size: 16px; }
-    /* line 889, site.css.scss */
+    /* line 1079, site.css.scss */
     .cd-section.about .content .column p.mousetext {
       font-size: 16px; }
 
-  /* line 897, site.css.scss */
+  /* line 1087, site.css.scss */
   .interior-content {
     display: block;
     width: 85%;
     max-width: 900px;
     margin: 0px auto; }
-    /* line 902, site.css.scss */
+    /* line 1092, site.css.scss */
     .interior-content h1 {
       font-size: 28px; }
-    /* line 905, site.css.scss */
+    /* line 1095, site.css.scss */
     .interior-content h2 {
       font-size: 20px;
       padding: 40px 0px 10px 0px; }
-    /* line 909, site.css.scss */
+    /* line 1099, site.css.scss */
     .interior-content h3 {
       font-size: 18px; }
+    /* line 1104, site.css.scss */
+    .interior-content.team .team-row .column {
+      width: 100%; }
+    /* line 1108, site.css.scss */
+    .interior-content.team .team-row:first-of-type .column {
+      width: 100%; }
+      /* line 1110, site.css.scss */
+      .interior-content.team .team-row:first-of-type .column img {
+        width: 150px; }
 
-  /* line 916, site.css.scss */
+  /* line 1121, site.css.scss */
   .interior-cta .content .column h2 {
     font-size: 28px; } }
+@media (max-width: 850px) {
+  /* line 1130, site.css.scss */
+  .interior-content h1 {
+    font-size: 36px; }
+  /* line 1133, site.css.scss */
+  .interior-content h2 {
+    font-size: 20px; }
+  /* line 1136, site.css.scss */
+  .interior-content p {
+    font-size: 16px; }
+  /* line 1140, site.css.scss */
+  .interior-content.amenities .amenities-row {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    height: auto; }
+    /* line 1146, site.css.scss */
+    .interior-content.amenities .amenities-row:last-of-type {
+      border-bottom: none; }
+    /* line 1149, site.css.scss */
+    .interior-content.amenities .amenities-row .column {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle; }
+      /* line 1157, site.css.scss */
+      .interior-content.amenities .amenities-row .column:first-of-type {
+        width: 100%;
+        height: 200px;
+        background-color: #000; }
+      /* line 1162, site.css.scss */
+      .interior-content.amenities .amenities-row .column:last-of-type {
+        padding: 0px; }
+      /* line 1166, site.css.scss */
+      .interior-content.amenities .amenities-row .column .caption h2 {
+        font-size: 20px; }
+
+  /* line 1174, site.css.scss */
+  header {
+    padding: 40px 0px;
+    background-size: cover; }
+    /* line 1177, site.css.scss */
+    header img {
+      max-width: 200px; } }
 @media (max-width: 750px) {
-  /* line 925, site.css.scss */
+  /* line 1184, site.css.scss */
   .overlay nav {
     position: relative;
     height: 70%;
@@ -952,7 +1185,7 @@ footer {
     transform: translateY(-50%);
     font-size: 30px;
     text-align: center; }
-  /* line 933, site.css.scss */
+  /* line 1192, site.css.scss */
   .overlay ul {
     list-style: none;
     padding: 0;
@@ -960,7 +1193,7 @@ footer {
     display: inline-block;
     position: relative;
     height: 100%; }
-    /* line 940, site.css.scss */
+    /* line 1199, site.css.scss */
     .overlay ul li {
       display: block;
       height: 25%;
@@ -968,7 +1201,7 @@ footer {
       min-height: 50px;
       position: relative;
       opacity: 0; }
-      /* line 947, site.css.scss */
+      /* line 1206, site.css.scss */
       .overlay ul li a {
         display: block;
         position: relative;
@@ -976,67 +1209,67 @@ footer {
         text-decoration: none;
         overflow: hidden;
         transition: all 0.5s ease; }
-        /* line 954, site.css.scss */
+        /* line 1213, site.css.scss */
         .overlay ul li a:hover {
           color: #000000; }
-        /* line 957, site.css.scss */
+        /* line 1216, site.css.scss */
         .overlay ul li a.active {
           color: #000000; }
 
-  /* line 965, site.css.scss */
+  /* line 1224, site.css.scss */
   .logo-home {
     display: none; }
 
-  /* line 968, site.css.scss */
+  /* line 1227, site.css.scss */
   .button_container.home, .button_container {
     top: 35px;
     left: 7.5%; }
 
-  /* line 972, site.css.scss */
+  /* line 1231, site.css.scss */
   .cd-section {
     width: calc(100%);
     margin-left: 0px;
     min-height: inherit; }
-    /* line 977, site.css.scss */
+    /* line 1236, site.css.scss */
     .cd-section.video .content {
       min-height: inherit;
       display: block;
       width: calc(100%);
       margin-left: 0px; }
-    /* line 984, site.css.scss */
+    /* line 1243, site.css.scss */
     .cd-section.social {
       background: #ffffff; }
-    /* line 988, site.css.scss */
+    /* line 1247, site.css.scss */
     .cd-section.contact .content {
       width: 95%;
       height: inherit; }
-      /* line 991, site.css.scss */
+      /* line 1250, site.css.scss */
       .cd-section.contact .content .column {
         display: block;
         width: 100%;
         height: auto;
         padding: 20px 10px; }
-        /* line 996, site.css.scss */
+        /* line 1255, site.css.scss */
         .cd-section.contact .content .column:first-of-type {
           padding: 0px;
           height: 200px; }
-        /* line 1000, site.css.scss */
+        /* line 1259, site.css.scss */
         .cd-section.contact .content .column #map {
           display: block;
           width: 100%;
           height: 100%; }
-    /* line 1009, site.css.scss */
+    /* line 1268, site.css.scss */
     .cd-section.features .content {
       display: block;
       border-collapse: separate;
       border-spacing: 20px;
       max-width: 1200px;
       width: 95%; }
-      /* line 1015, site.css.scss */
+      /* line 1274, site.css.scss */
       .cd-section.features .content .column {
         display: block;
         margin: 20px 0px; }
-    /* line 1022, site.css.scss */
+    /* line 1281, site.css.scss */
     .cd-section.social .content {
       display: block;
       padding: 60px 40px;
@@ -1044,7 +1277,7 @@ footer {
       height: auto;
       max-width: auto;
       width: 100%; }
-      /* line 1029, site.css.scss */
+      /* line 1288, site.css.scss */
       .cd-section.social .content .column {
         display: block;
         vertical-align: middle;
@@ -1052,13 +1285,13 @@ footer {
         padding: 0px;
         height: auto;
         text-align: center; }
-        /* line 1036, site.css.scss */
+        /* line 1295, site.css.scss */
         .cd-section.social .content .column h2 {
           text-align: center; }
-        /* line 1039, site.css.scss */
+        /* line 1298, site.css.scss */
         .cd-section.social .content .column:first-of-type {
           width: 100%; }
-          /* line 1041, site.css.scss */
+          /* line 1300, site.css.scss */
           .cd-section.social .content .column:first-of-type a {
             display: inline-block;
             width: 75px;
@@ -1070,13 +1303,13 @@ footer {
             cursor: pointer;
             cursor: hand;
             transition: all 0.5s ease; }
-            /* line 1052, site.css.scss */
+            /* line 1311, site.css.scss */
             .cd-section.social .content .column:first-of-type a i {
               margin: 10px 0px 0px 0px; }
-            /* line 1055, site.css.scss */
+            /* line 1314, site.css.scss */
             .cd-section.social .content .column:first-of-type a:hover {
               background: rgba(205, 222, 237, 0.1); }
-    /* line 1064, site.css.scss */
+    /* line 1323, site.css.scss */
     .cd-section.services .content {
       display: block;
       padding: 20px 0px 30px 0px;
@@ -1084,7 +1317,7 @@ footer {
       height: auto;
       max-width: auto;
       width: 95%; }
-      /* line 1071, site.css.scss */
+      /* line 1330, site.css.scss */
       .cd-section.services .content .column {
         display: block;
         text-align: left;
@@ -1092,17 +1325,17 @@ footer {
         width: 100%;
         padding: 0px;
         height: 500px; }
-        /* line 1078, site.css.scss */
+        /* line 1337, site.css.scss */
         .cd-section.services .content .column:first-of-type {
           margin-bottom: 20px; }
-        /* line 1081, site.css.scss */
+        /* line 1340, site.css.scss */
         .cd-section.services .content .column .row {
           display: table;
           height: 33.33333333333333%;
           width: calc(100% + 5px);
           border-collapse: separate;
           border-spacing: 10px 5px; }
-          /* line 1087, site.css.scss */
+          /* line 1346, site.css.scss */
           .cd-section.services .content .column .row .block {
             display: table-cell;
             height: 100%;
@@ -1111,7 +1344,7 @@ footer {
             position: relative;
             background: #000;
             vertical-align: middle; }
-            /* line 1095, site.css.scss */
+            /* line 1354, site.css.scss */
             .cd-section.services .content .column .row .block .caption {
               display: none;
               position: absolute;
@@ -1120,7 +1353,7 @@ footer {
               bottom: 0;
               padding: 20px;
               z-index: 999; }
-              /* line 1103, site.css.scss */
+              /* line 1362, site.css.scss */
               .cd-section.services .content .column .row .block .caption h2 {
                 color: #ffffff;
                 font-size: 16px;
@@ -1129,7 +1362,7 @@ footer {
                 line-height: 1.1;
                 font-style: normal;
                 padding: 0px 0px 10px 0px; }
-              /* line 1112, site.css.scss */
+              /* line 1371, site.css.scss */
               .cd-section.services .content .column .row .block .caption p {
                 font-size: 12px;
                 font-weight: 300px;
@@ -1138,60 +1371,60 @@ footer {
                 line-height: 1.2;
                 max-width: 360px;
                 padding: 0px; }
-    /* line 1127, site.css.scss */
+    /* line 1386, site.css.scss */
     .cd-section.about {
       padding: 20px; }
-      /* line 1129, site.css.scss */
+      /* line 1388, site.css.scss */
       .cd-section.about .content {
         display: block;
         width: 98%; }
-        /* line 1132, site.css.scss */
+        /* line 1391, site.css.scss */
         .cd-section.about .content .column {
           display: block;
           text-align: left;
           vertical-align: middle;
           width: 100%;
           padding: 0px 10px; }
-          /* line 1138, site.css.scss */
+          /* line 1397, site.css.scss */
           .cd-section.about .content .column h2 {
             text-align: left;
             padding: 0px 0px 20px 0px; }
-          /* line 1142, site.css.scss */
+          /* line 1401, site.css.scss */
           .cd-section.about .content .column:first-of-type {
             border-right: none;
             padding: 0px 10px; }
 
-  /* line 1151, site.css.scss */
+  /* line 1410, site.css.scss */
   .interior-cta .content {
     display: block;
     padding: 60px 0px;
     margin: 0px auto;
     width: 85%; }
-    /* line 1156, site.css.scss */
+    /* line 1415, site.css.scss */
     .interior-cta .content .column {
       display: block;
       text-align: left;
       vertical-align: middle;
       width: 100%;
       padding: 0px 0px; }
-      /* line 1162, site.css.scss */
+      /* line 1421, site.css.scss */
       .interior-cta .content .column h2 {
         text-align: left;
         padding: 0px 0px 20px 0px; }
-      /* line 1166, site.css.scss */
+      /* line 1425, site.css.scss */
       .interior-cta .content .column:first-of-type {
         border-right: none;
         padding: 0px 0px; }
 
-  /* line 1173, site.css.scss */
+  /* line 1432, site.css.scss */
   .cd-nav-trigger {
     display: none; }
 
-  /* line 1176, site.css.scss */
+  /* line 1435, site.css.scss */
   .no-touch #cd-vertical-nav {
     display: none; }
 
-  /* line 1179, site.css.scss */
+  /* line 1438, site.css.scss */
   footer {
     display: block;
     width: 85%;
@@ -1200,14 +1433,14 @@ footer {
     line-height: 1.5;
     margin: 40px auto;
     text-align: center; }
-    /* line 1187, site.css.scss */
+    /* line 1446, site.css.scss */
     footer a {
       font-size: 16px;
       color: #2a2a2a;
       padding: 0px 10px; }
-      /* line 1191, site.css.scss */
+      /* line 1450, site.css.scss */
       footer a:last-of-type {
         padding: 0px 0px 0px 10px; }
-      /* line 1194, site.css.scss */
+      /* line 1453, site.css.scss */
       footer a:hover {
         text-decoration: underline; } }
