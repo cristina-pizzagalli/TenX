@@ -1,1446 +1,475 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-@import url("https://fonts.googleapis.com/css?family=Muli");
-/* line 6, _reset.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+// stylelint-disable at-rule-no-vendor-prefix, declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
 
-/* HTML5 display-role reset for older browsers */
-/* line 27, _reset.scss */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, main {
-  display: block; }
+// Reboot
+//
+// Normalization of HTML elements, manually forked from Normalize.css to remove
+// styles targeting irrelevant browsers while applying new styles.
+//
+// Normalize is licensed MIT. https://github.com/necolas/normalize.css
 
-/* line 31, _reset.scss */
-body {
-  line-height: 1; }
 
-/* line 34, _reset.scss */
-ol, ul {
-  list-style: none; }
+// Document
+//
+// 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// 2. Change the default font family in all browsers.
+// 3. Correct the line height in all browsers.
+// 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+// 5. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
+//    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+// 6. Change the default tap highlight to be completely transparent in iOS.
 
-/* line 37, _reset.scss */
-blockquote, q {
-  quotes: none; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1
+}
 
-/* line 40, _reset.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
+html {
+  font-family: sans-serif; // 2
+  line-height: 1.15; // 3
+  -webkit-text-size-adjust: 100%; // 4
+  -ms-overflow-style: scrollbar; // 5
+  -webkit-tap-highlight-color: rgba($black, 0); // 6
+}
 
-/* line 45, _reset.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
 
-/* line 7, site.css.scss */
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-/* line 11, site.css.scss */
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 14, site.css.scss */
-body {
-  font-size: 100%;
-  font-family: "Muli", sans-serif; }
-
-/* line 20, site.css.scss */
-body, html {
-  height: 100%; }
-
-/* line 23, site.css.scss */
-a {
-  text-decoration: none; }
-
-/* line 26, site.css.scss */
-img {
-  max-width: 100%; }
-
-/* line 29, site.css.scss */
-.clear {
+// Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
+// TODO: remove in v5
+// stylelint-disable-next-line selector-list-comma-newline-after
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
-  width: 100%;
-  clear: both; }
+}
 
-/* line 38, site.css.scss */
-.button_container {
-  position: absolute;
-  top: 35px;
-  left: 2.5%;
-  height: 27px;
-  width: 35px;
-  cursor: pointer;
-  z-index: 999999;
-  transition: opacity .25s ease; }
-  /* line 47, site.css.scss */
-  .button_container:hover {
-    opacity: .7; }
-  /* line 51, site.css.scss */
-  .button_container.active .top {
-    transform: translateY(11px) translateX(0) rotate(45deg);
-    background: #cbdbe8; }
-  /* line 55, site.css.scss */
-  .button_container.active .middle {
-    opacity: 0;
-    background: #cbdbe8; }
-  /* line 59, site.css.scss */
-  .button_container.active .bottom {
-    transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: #cbdbe8; }
-  /* line 64, site.css.scss */
-  .button_container span {
-    background: #cbdbe8;
-    border: none;
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .35s ease;
-    cursor: pointer; }
-    /* line 74, site.css.scss */
-    .button_container span:nth-of-type(2) {
-      top: 11px; }
-    /* line 77, site.css.scss */
-    .button_container span:nth-of-type(3) {
-      top: 22px; }
-  /* line 81, site.css.scss */
-  .button_container.home {
-    top: 120px;
-    left: 30px;
-    position: fixed; }
-  /* line 86, site.css.scss */
-  .button_container.active {
-    position: fixed; }
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Set an explicit initial text-align value so that we can later use the
+//    the `inherit` value on things like `<th>` elements.
 
-/* line 90, site.css.scss */
-.overlay {
-  position: fixed;
-  background: #fafafa;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
-  z-index: 99999; }
-  /* line 102, site.css.scss */
-  .overlay.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%; }
-    /* line 106, site.css.scss */
-    .overlay.open li {
-      animation: fadeInRight .5s ease forwards;
-      animation-delay: .35s; }
-      /* line 109, site.css.scss */
-      .overlay.open li:nth-of-type(2) {
-        animation-delay: .4s; }
-      /* line 112, site.css.scss */
-      .overlay.open li:nth-of-type(3) {
-        animation-delay: .45s; }
-      /* line 115, site.css.scss */
-      .overlay.open li:nth-of-type(4) {
-        animation-delay: .50s; }
-  /* line 120, site.css.scss */
-  .overlay nav {
-    position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    text-align: center; }
-  /* line 128, site.css.scss */
-  .overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%; }
-    /* line 135, site.css.scss */
-    .overlay ul li {
-      display: block;
-      height: 25%;
-      height: calc(100% / 6);
-      min-height: 50px;
-      position: relative;
-      opacity: 0; }
-      /* line 142, site.css.scss */
-      .overlay ul li a {
-        display: block;
-        position: relative;
-        color: #a3a8ab;
-        text-decoration: none;
-        overflow: hidden;
-        transition: all 0.5s ease; }
-        /* line 149, site.css.scss */
-        .overlay ul li a:hover {
-          color: #000000; }
-        /* line 152, site.css.scss */
-        .overlay ul li a.active {
-          color: #000000; }
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left; // 3
+  background-color: $body-bg; // 2
+}
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%; }
-  100% {
-    opacity: 1;
-    left: 0; } }
-/* line 173, site.css.scss */
-a {
-  color: #000000; }
+// Suppress the focus outline on elements that cannot be accessed via keyboard.
+// This prevents an unwanted focus outline from appearing around elements that
+// might still respond to pointer events.
+//
+// Credit: https://github.com/suitcss/base
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
 
-/* line 176, site.css.scss */
-a.outline-btn {
-  display: inline-block;
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  border: 3px solid #cddeed;
-  margin: 25px 0px;
-  transition: all 0.5s ease; }
-  /* line 185, site.css.scss */
-  a.outline-btn:hover {
-    background: #ffffff; }
-  /* line 188, site.css.scss */
-  a.outline-btn.small {
-    font-size: 18px;
-    padding: 14px 20px; }
 
-/* line 193, site.css.scss */
-input.outline-btn {
-  display: inline-block;
-  padding: 20px 30px;
-  border-radius: 10px;
-  font-size: 22px;
-  text-align: center;
-  border: 3px solid #cddeed;
-  margin: 25px 0px;
-  background: transparent;
-  transition: all 0.5s ease; }
-  /* line 203, site.css.scss */
-  input.outline-btn:hover {
-    background: #ffffff; }
-  /* line 206, site.css.scss */
-  input.outline-btn.small {
-    font-size: 18px;
-    padding: 14px 20px; }
+// Content grouping
+//
+// 1. Add the correct box sizing in Firefox.
+// 2. Show the overflow in Edge and IE.
 
-/* line 211, site.css.scss */
-.cd-section {
-  min-height: 100vh;
-  height: auto;
-  overflow: hidden;
+hr {
+  box-sizing: content-box; // 1
+  height: 0; // 1
+  overflow: visible; // 2
+}
+
+
+//
+// Typography
+//
+
+// Remove top margins from headings
+//
+// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+// margin for easier control within type scales as it avoids margin collapsing.
+// stylelint-disable-next-line selector-list-comma-newline-after
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $headings-margin-bottom;
+}
+
+// Reset margins on paragraphs
+//
+// Similarly, the top margin on `<p>`s get reset. However, we also reset the
+// bottom margin to use `rem` units instead of `em`.
+p {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+// Abbreviations
+//
+// 1. Duplicate behavior to the data-* attribute for our tooltip plugin
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Add explicit cursor to indicate changed behavior.
+// 4. Remove the bottom border in Firefox 39-.
+// 5. Prevent the text-decoration to be skipped.
+
+abbr[title],
+abbr[data-original-title] { // 1
+  text-decoration: underline; // 2
+  text-decoration: underline dotted; // 2
+  cursor: help; // 3
+  border-bottom: 0; // 4
+  text-decoration-skip-ink: none; // 5
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: $dt-font-weight;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; // Undo browser default
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder; // Add the correct font weight in Chrome, Edge, and Safari
+}
+
+small {
+  font-size: 80%; // Add the correct font size in all browsers
+}
+
+//
+// Prevent `sub` and `sup` elements from affecting the line height in
+// all browsers.
+//
+
+sub,
+sup {
   position: relative;
-  width: calc(100% - 100px);
-  margin-left: 100px;
-  display: flex; }
-  /* line 219, site.css.scss */
-  .cd-section .content {
-    position: relative;
-    width: 80%;
-    max-width: 1480px;
-    height: auto;
-    display: block;
-    margin: auto; }
-  /* line 228, site.css.scss */
-  .cd-section.video .content {
-    display: block;
-    width: calc(100%-100px);
-    margin: auto; }
-  /* line 234, site.css.scss */
-  .cd-section.social {
-    background: #ffffff; }
-  /* line 238, site.css.scss */
-  .cd-section.contact .content {
-    display: table;
-    border-collapse: separate;
-    border-spacing: 0px;
-    width: 100%;
-    height: 100vh;
-    max-width: 100%; }
-    /* line 245, site.css.scss */
-    .cd-section.contact .content .column {
-      display: table-cell;
-      width: 50%;
-      height: 100%;
-      vertical-align: middle;
-      padding: 5%; }
-      /* line 251, site.css.scss */
-      .cd-section.contact .content .column:first-of-type {
-        padding: 0px; }
-      /* line 254, site.css.scss */
-      .cd-section.contact .content .column #map {
-        display: block;
-        width: 100%;
-        height: 100%; }
-      /* line 259, site.css.scss */
-      .cd-section.contact .content .column h2 {
-        color: #000000;
-        font-size: 30px;
-        text-align: left;
-        font-weight: 300;
-        line-height: 1.1;
-        font-style: normal;
-        padding: 0px 0px 10px 0px; }
-      /* line 268, site.css.scss */
-      .cd-section.contact .content .column p {
-        font-size: 16px;
-        font-weight: 300px;
-        color: #5a6163;
-        text-align: left;
-        line-height: 1.4;
-        max-width: 360px;
-        padding: 20px 0px; }
-        /* line 276, site.css.scss */
-        .cd-section.contact .content .column p a {
-          color: #5a6163;
-          text-decoration: underline; }
-          /* line 279, site.css.scss */
-          .cd-section.contact .content .column p a:hover {
-            text-decoration: none; }
-      /* line 284, site.css.scss */
-      .cd-section.contact .content .column h3 {
-        color: #000000;
-        font-size: 24px;
-        text-align: left;
-        font-weight: 300;
-        line-height: 1.1;
-        font-style: normal;
-        padding: 20px 0px 10px 0px; }
-      /* line 293, site.css.scss */
-      .cd-section.contact .content .column input[type=email], .cd-section.contact .content .column textarea {
-        padding: 10px;
-        border: 3px solid #cddeed;
-        display: block;
-        font-size: 16px;
-        margin: 10px 0px;
-        width: 100%;
-        background: #fafafa; }
-  /* line 305, site.css.scss */
-  .cd-section.features {
-    background: url("/images/features-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed; }
-    /* line 309, site.css.scss */
-    .cd-section.features .content {
-      display: table;
-      border-collapse: separate;
-      border-spacing: 20px;
-      max-width: 1200px;
-      table-layout: fixed; }
-      /* line 315, site.css.scss */
-      .cd-section.features .content .column {
-        display: table-cell;
-        background: rgba(255, 255, 255, 0.85);
-        padding: 20px 20px 110px 20px;
-        width: auto; }
-        /* line 320, site.css.scss */
-        .cd-section.features .content .column img {
-          border: 5px solid #fff; }
-        /* line 323, site.css.scss */
-        .cd-section.features .content .column h2 {
-          color: #000000;
-          font-size: 24px;
-          text-align: left;
-          font-weight: 300;
-          line-height: 1.1;
-          font-style: normal;
-          padding: 25px 10px; }
-        /* line 332, site.css.scss */
-        .cd-section.features .content .column p {
-          font-size: 16px;
-          font-weight: 300px;
-          color: #5a6163;
-          text-align: left;
-          line-height: 1.2;
-          padding: 0px 10px; }
-        /* line 340, site.css.scss */
-        .cd-section.features .content .column a.outline-btn {
-          position: absolute;
-          bottom: 30px;
-          margin: 20px 10px; }
-  /* line 349, site.css.scss */
-  .cd-section.social .content {
-    display: table;
-    padding: 60px 40px;
-    height: 90vh;
-    max-width: auto;
-    width: 100%; }
-    /* line 355, site.css.scss */
-    .cd-section.social .content .column {
-      display: table-cell;
-      text-align: left;
-      vertical-align: middle;
-      width: 90%;
-      padding: 0px;
-      height: 100%; }
-      /* line 362, site.css.scss */
-      .cd-section.social .content .column h2 {
-        color: #000000;
-        font-size: 30px;
-        text-align: left;
-        font-weight: 300;
-        line-height: 1.1;
-        font-style: normal;
-        padding: 20px 0px 0px 0px; }
-      /* line 371, site.css.scss */
-      .cd-section.social .content .column:first-of-type {
-        width: 10%; }
-        /* line 373, site.css.scss */
-        .cd-section.social .content .column:first-of-type a {
-          display: block;
-          width: 75px;
-          height: 75px;
-          border: 4px solid #cddeed;
-          border-radius: 50%;
-          text-align: center;
-          margin: 20px 0px;
-          cursor: pointer;
-          cursor: hand;
-          transition: all 0.5s ease; }
-          /* line 384, site.css.scss */
-          .cd-section.social .content .column:first-of-type a i {
-            margin: 10px 0px 0px 0px; }
-          /* line 387, site.css.scss */
-          .cd-section.social .content .column:first-of-type a:hover {
-            background: rgba(205, 222, 237, 0.1); }
-  /* line 396, site.css.scss */
-  .cd-section.services .content {
-    display: table;
-    padding: 60px 40px;
-    height: 100vh;
-    max-width: auto;
-    width: 100%; }
-    /* line 402, site.css.scss */
-    .cd-section.services .content .column {
-      display: table-cell;
-      text-align: left;
-      vertical-align: top;
-      width: 33.333%;
-      padding: 0px;
-      height: 100%; }
-      /* line 409, site.css.scss */
-      .cd-section.services .content .column .row {
-        display: table;
-        height: 33.33333333333333%;
-        width: calc(100% + 10px);
-        border-collapse: separate;
-        border-spacing: 10px 5px; }
-        /* line 415, site.css.scss */
-        .cd-section.services .content .column .row.one {
-          height: 30%; }
-        /* line 418, site.css.scss */
-        .cd-section.services .content .column .row.two {
-          height: 60%; }
-        /* line 421, site.css.scss */
-        .cd-section.services .content .column .row.three {
-          height: 10%; }
-        /* line 424, site.css.scss */
-        .cd-section.services .content .column .row.four {
-          height: 70%; }
-        /* line 427, site.css.scss */
-        .cd-section.services .content .column .row.five {
-          height: 30%; }
-        /* line 430, site.css.scss */
-        .cd-section.services .content .column .row.six {
-          height: 30%; }
-        /* line 433, site.css.scss */
-        .cd-section.services .content .column .row.seven {
-          height: 30%; }
-        /* line 436, site.css.scss */
-        .cd-section.services .content .column .row.eight {
-          height: 30%; }
-        /* line 439, site.css.scss */
-        .cd-section.services .content .column .row.nine {
-          height: 10%; }
-        /* line 442, site.css.scss */
-        .cd-section.services .content .column .row a {
-          width: 100%;
-          padding-left: 0px;
-          padding-right: 0px;
-          margin: 5px auto;
-          display: block; }
-        /* line 449, site.css.scss */
-        .cd-section.services .content .column .row .block {
-          display: table-cell;
-          height: 100%;
-          width: auto;
-          overflow: hidden;
-          position: relative;
-          background: #000;
-          vertical-align: middle; }
-          /* line 457, site.css.scss */
-          .cd-section.services .content .column .row .block .caption {
-            display: none;
-            position: absolute;
-            width: 100%;
-            color: #fff;
-            bottom: 0;
-            padding: 10px;
-            z-index: 999; }
-            /* line 465, site.css.scss */
-            .cd-section.services .content .column .row .block .caption h2 {
-              color: #ffffff;
-              font-size: 22px;
-              text-align: left;
-              font-weight: 300;
-              line-height: 1.1;
-              font-style: normal;
-              padding: 0px 0px 10px 0px; }
-            /* line 474, site.css.scss */
-            .cd-section.services .content .column .row .block .caption p {
-              font-size: 14px;
-              font-weight: 300px;
-              color: #ffffff;
-              text-align: left;
-              line-height: 1.2;
-              max-width: 360px;
-              padding: 0px; }
-          /* line 485, site.css.scss */
-          .cd-section.services .content .column .row .block:hover .inner {
-            transform: scale(1.1);
-            opacity: 0.5; }
-          /* line 491, site.css.scss */
-          .cd-section.services .content .column .row .block:hover .caption {
-            display: block; }
-          /* line 495, site.css.scss */
-          .cd-section.services .content .column .row .block .inner {
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            transition-duration: 0.3s; }
-            /* line 503, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.one {
-              background-image: url("/images/bg1.png"); }
-            /* line 506, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.two {
-              background-image: url("/images/bg2.png"); }
-            /* line 509, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.three {
-              background-image: url("/images/bg3.png"); }
-            /* line 512, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.four {
-              background-image: url("/images/bg4.png"); }
-            /* line 515, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.five {
-              background-image: url("/images/bg5.png"); }
-            /* line 518, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.six {
-              background-image: url("/images/bg6.png"); }
-            /* line 521, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.seven {
-              background-image: url("/images/bg7.png"); }
-            /* line 524, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.eight {
-              background-image: url("/images/bg8.png"); }
-            /* line 527, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.nine {
-              background-image: url("/images/bg9.png"); }
-            /* line 530, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.ten {
-              background-image: url("/images/bg10.png"); }
-            /* line 533, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.eleven {
-              background-image: url("/images/bg11.png"); }
-            /* line 536, site.css.scss */
-            .cd-section.services .content .column .row .block .inner.twelve {
-              background-image: url("/images/bg12.png"); }
-  /* line 545, site.css.scss */
-  .cd-section.about {
-    background: url("/images/about-bg.jpg");
-    background-size: cover;
-    background-attachment: fixed; }
-    /* line 549, site.css.scss */
-    .cd-section.about .content {
-      display: table;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 60px 40px;
-      max-width: 1000px; }
-      /* line 554, site.css.scss */
-      .cd-section.about .content .column {
-        display: table-cell;
-        text-align: left;
-        vertical-align: middle;
-        width: 50%;
-        padding: 0px 20px 0px 40px; }
-        /* line 560, site.css.scss */
-        .cd-section.about .content .column h2 {
-          color: #000000;
-          font-size: 30px;
-          text-align: right;
-          font-weight: 300;
-          line-height: 1.1;
-          font-style: normal;
-          padding: 0px 20px; }
-        /* line 569, site.css.scss */
-        .cd-section.about .content .column p {
-          font-size: 16px;
-          font-weight: 300px;
-          color: #5a6163;
-          text-align: left;
-          line-height: 1.2; }
-          /* line 575, site.css.scss */
-          .cd-section.about .content .column p.mousetext {
-            font-size: 14px;
-            font-style: italic; }
-        /* line 580, site.css.scss */
-        .cd-section.about .content .column:first-of-type {
-          border-right: 1px solid #ddd;
-          padding: 0px 20px 0px 10px; }
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
 
-/* line 588, site.css.scss */
-.cd-nav-trigger {
-  display: none; }
+sub { bottom: -.25em; }
+sup { top: -.5em; }
 
-/* line 591, site.css.scss */
-.logo-home {
-  display: block;
-  top: 25px;
-  left: 28px;
-  width: 100%;
+
+//
+// Links
+//
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+// And undo these styles for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+// See https://github.com/twbs/bootstrap/issues/19402
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover-focus {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+//
+// Code
+//
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $font-family-monospace;
+  font-size: 1em; // Correct the odd `em` font sizing in all browsers.
+}
+
+pre {
+  // Remove browser default top margin
+  margin-top: 0;
+  // Reset browser default of `1em` to use `rem`s
+  margin-bottom: 1rem;
+  // Don't allow content to break outside
+  overflow: auto;
+  // We have @viewport set which causes scrollbars to overlap content in IE11 and Edge, so
+  // we force a non-overlapping, non-auto-hiding scrollbar to counteract.
+  -ms-overflow-style: scrollbar;
+}
+
+
+//
+// Figures
+//
+
+figure {
+  // Apply a consistent margin strategy (matches our type styles).
+  margin: 0 0 1rem;
+}
+
+
+//
+// Images and content
+//
+
+img {
+  vertical-align: middle;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+}
+
+svg {
+  // Workaround for the SVG overflow bug in IE10/11 is still required.
+  // See https://github.com/twbs/bootstrap/issues/26878
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+
+//
+// Tables
+//
+
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
+caption {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+  color: $table-caption-color;
   text-align: left;
-  position: fixed;
-  z-index: 999999; }
+  caption-side: bottom;
+}
 
-/* line 600, site.css.scss */
-.no-touch #cd-vertical-nav {
-  position: fixed;
-  left: 0px;
-  background: #fff;
-  height: 100%;
-  z-index: 1;
-  width: 100px; }
-  /* line 607, site.css.scss */
-  .no-touch #cd-vertical-nav ul {
-    position: absolute;
-    bottom: 40px;
-    margin: 0px auto;
-    width: 100%; }
-  /* line 613, site.css.scss */
-  .no-touch #cd-vertical-nav li {
-    text-align: center; }
-  /* line 616, site.css.scss */
-  .no-touch #cd-vertical-nav a {
-    display: inline-block;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-    /* line 15, ../../../../../../Library/Ruby/Gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
-    .no-touch #cd-vertical-nav a:after {
-      content: "";
-      display: table;
-      clear: both; }
-    /* line 620, site.css.scss */
-    .no-touch #cd-vertical-nav a span {
-      float: right;
-      display: inline-block;
-      -webkit-transform: scale(0.6);
-      -moz-transform: scale(0.6);
-      -ms-transform: scale(0.6);
-      -o-transform: scale(0.6);
-      transform: scale(0.6); }
-    /* line 625, site.css.scss */
-    .no-touch #cd-vertical-nav a:hover span {
-      -webkit-transform: scale(0.8);
-      -moz-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      -o-transform: scale(0.8);
-      transform: scale(0.8); }
-    /* line 628, site.css.scss */
-    .no-touch #cd-vertical-nav a.is-selected .cd-dot {
-      background-color: #000; }
-  /* line 632, site.css.scss */
-  .no-touch #cd-vertical-nav .cd-dot {
-    position: relative;
-    top: 8px;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    border: 4px solid #cddeed;
-    -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-    -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-    transition: transform 0.2s, background-color 0.5s;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
+th {
+  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
+  // closest parent with a set `text-align`.
+  text-align: inherit;
+}
 
-/* line 645, site.css.scss */
-header {
-  border-top: 100px solid #ffffff;
+
+//
+// Forms
+//
+
+label {
+  // Allow labels to use `margin` for spacing.
+  display: inline-block;
+  margin-bottom: $label-margin-bottom;
+}
+
+// Remove the default `border-radius` that macOS Chrome adds.
+//
+// Details at https://github.com/twbs/bootstrap/issues/24093
+button {
+  border-radius: 0;
+}
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+button,
+[type="button"], // 1
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; // 2
+}
+
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box; // 1. Add the correct box sizing in IE 10-
+  padding: 0; // 2. Remove the padding in IE 10-
+}
+
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  // Remove the default appearance of temporal inputs to avoid a Mobile Safari
+  // bug where setting a custom line-height prevents text from being vertically
+  // centered within the input.
+  // See https://bugs.webkit.org/show_bug.cgi?id=139848
+  // and https://github.com/twbs/bootstrap/issues/11266
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto; // Remove the default vertical scrollbar in IE.
+  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+  resize: vertical;
+}
+
+fieldset {
+  // Browsers set a default `min-width: min-content;` on fieldsets,
+  // unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+  // So we reset that to ensure fieldsets behave more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359
+  // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+  min-width: 0;
+  // Reset the default outline behavior of fieldsets so they don't affect page layout.
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// 1. Correct the text wrapping in Edge and IE.
+// 2. Correct the color inheritance from `fieldset` elements in IE.
+legend {
   display: block;
   width: 100%;
+  max-width: 100%; // 1
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit; // 2
+  white-space: normal; // 1
+}
+
+progress {
+  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
-  padding: 100px 0px;
-  text-align: center;
-  background: url("/images/amenities-bg.jpg") no-repeat;
-  background-size: 100%;
-  background-attachment: fixed; }
-  /* line 655, site.css.scss */
-  header img {
-    width: 70%;
-    max-width: 300px; }
-  /* line 659, site.css.scss */
-  header.amenities {
-    background: url("/images/amenities-bg.jpg") no-repeat;
-    background-size: 100%;
-    background-attachment: fixed; }
-  /* line 664, site.css.scss */
-  header.team {
-    background: url("/images/features-bg.jpg") no-repeat;
-    background-size: 100%;
-    background-attachment: fixed; }
+}
 
-/* line 670, site.css.scss */
-.interior-content {
-  display: block;
-  width: 85%;
-  max-width: 900px;
-  margin: 40px auto; }
-  /* line 675, site.css.scss */
-  .interior-content h1 {
-    color: #000;
-    font-size: 36px;
-    text-align: left;
-    font-weight: 300;
-    line-height: 1.1;
-    font-style: normal;
-    padding: 40px 0px 40px 0px; }
-  /* line 684, site.css.scss */
-  .interior-content h2 {
-    color: #5a6163;
-    font-size: 20px;
-    text-align: left;
-    font-weight: 300;
-    line-height: 1.1;
-    font-style: normal;
-    padding: 0px 0px 10px 0px; }
-  /* line 693, site.css.scss */
-  .interior-content h3 {
-    color: #5a6163;
-    font-size: 18px;
-    text-align: left;
-    font-weight: 600;
-    line-height: 1.1;
-    font-style: normal;
-    padding: 20px 0px 10px 0px; }
-  /* line 702, site.css.scss */
-  .interior-content h4 {
-    color: #5a6163;
-    font-size: 14px;
-    text-align: left;
-    font-weight: 600;
-    line-height: 1.1;
-    font-style: normal;
-    padding: 20px 0px 10px 0px; }
-  /* line 711, site.css.scss */
-  .interior-content p {
-    color: #5a6163;
-    font-size: 16px;
-    font-weight: 300px;
-    text-align: left;
-    line-height: 1.2;
-    padding: 10px 0px; }
-  /* line 719, site.css.scss */
-  .interior-content ul {
-    margin-left: 20px; }
-    /* line 721, site.css.scss */
-    .interior-content ul li {
-      list-style: disc;
-      color: #5a6163;
-      font-size: 16px;
-      font-weight: 300px;
-      text-align: left;
-      line-height: 1.2;
-      padding: 10px 0px; }
-      /* line 729, site.css.scss */
-      .interior-content ul li ul li {
-        padding: 10px 0px 0px 0px; }
-  /* line 735, site.css.scss */
-  .interior-content.team h2 {
-    display: block;
-    padding-top: 40px;
-    margin-top: 40px;
-    padding-bottom: 60px;
-    border-top: 1px solid #ddd; }
-  /* line 742, site.css.scss */
-  .interior-content.team img {
-    border-radius: 50%;
-    width: 150px; }
-  /* line 746, site.css.scss */
-  .interior-content.team h2 {
-    display: block;
-    clear: both; }
-  /* line 750, site.css.scss */
-  .interior-content.team .team-row {
-    display: block;
-    clear: both;
-    width: 100%; }
-    /* line 754, site.css.scss */
-    .interior-content.team .team-row .column {
-      display: block;
-      float: left;
-      text-align: center;
-      width: 50%;
-      padding: 0px 20px 40px 20px; }
-      /* line 760, site.css.scss */
-      .interior-content.team .team-row .column h3 {
-        text-align: center; }
-    /* line 766, site.css.scss */
-    .interior-content.team .team-row:first-of-type .column {
-      width: 100%; }
-      /* line 768, site.css.scss */
-      .interior-content.team .team-row:first-of-type .column img {
-        width: 225px; }
-  /* line 776, site.css.scss */
-  .interior-content.amenities .amenities-row {
-    margin: 0px 0px 20px 0px;
-    padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #ddd;
-    display: table;
-    height: 350px; }
-    /* line 782, site.css.scss */
-    .interior-content.amenities .amenities-row:last-of-type {
-      border-bottom: none; }
-    /* line 785, site.css.scss */
-    .interior-content.amenities .amenities-row .column {
-      display: table-cell;
-      vertical-align: middle;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      vertical-align: middle; }
-      /* line 792, site.css.scss */
-      .interior-content.amenities .amenities-row .column:first-of-type {
-        width: 30%;
-        background-color: #000; }
-      /* line 796, site.css.scss */
-      .interior-content.amenities .amenities-row .column:last-of-type {
-        padding: 40px; }
-      /* line 799, site.css.scss */
-      .interior-content.amenities .amenities-row .column .caption {
-        display: none;
-        position: absolute;
-        width: 100%;
-        color: #fff;
-        bottom: 0;
-        padding: 20px;
-        z-index: 999; }
-        /* line 807, site.css.scss */
-        .interior-content.amenities .amenities-row .column .caption h2 {
-          color: #ffffff;
-          font-size: 20px;
-          text-align: left;
-          font-weight: 300;
-          line-height: 1.1;
-          font-style: normal;
-          padding: 0px 0px 10px 0px; }
-      /* line 818, site.css.scss */
-      .interior-content.amenities .amenities-row .column:hover .inner {
-        transform: scale(1.1);
-        opacity: 0.5; }
-      /* line 824, site.css.scss */
-      .interior-content.amenities .amenities-row .column:hover .caption {
-        display: block; }
-      /* line 828, site.css.scss */
-      .interior-content.amenities .amenities-row .column .inner {
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        transition-duration: 0.3s; }
-        /* line 838, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.tennis {
-          background-image: url("/images/bg4.png"); }
-        /* line 841, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.squash {
-          background-image: url("/images/bg14.png"); }
-        /* line 844, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.golf {
-          background-image: url("/images/bg10.png"); }
-        /* line 847, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.fitness {
-          background-image: url("/images/bg7.png"); }
-        /* line 850, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.studios {
-          background-image: url("/images/features-2.png"); }
-        /* line 853, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.swimming {
-          background-image: url("/images/bg13.png"); }
-        /* line 856, site.css.scss */
-        .interior-content.amenities .amenities-row .column .inner.members {
-          background-image: url("/images/bg5.png"); }
-  /* line 863, site.css.scss */
-  .interior-content img.full-width {
-    display: block;
-    width: 100%;
-    margin: 60px 0px; }
-  /* line 868, site.css.scss */
-  .interior-content img.image-left {
-    display: block;
-    float: left;
-    width: 40%;
-    margin: 15px 15px 15px 0px; }
-  /* line 874, site.css.scss */
-  .interior-content img.image-right {
-    display: block;
-    float: right;
-    width: 40%;
-    margin: 15px 0px 15px 15px; }
+[type="search"] {
+  // This overrides the extra rounded corners on search inputs in iOS so that our
+  // `.form-control` class can properly style them. Note that this cannot simply
+  // be added to `.form-control` as it's not specific enough. For details, see
+  // https://github.com/twbs/bootstrap/issues/11586.
+  outline-offset: -2px; // 2. Correct the outline style in Safari.
+  -webkit-appearance: none;
+}
 
-/* line 881, site.css.scss */
-.interior-cta {
-  display: block;
-  width: 100%;
-  clear: both;
-  background: #fafafa; }
-  /* line 886, site.css.scss */
-  .interior-cta .content {
-    display: table;
-    padding: 60px 40px;
-    margin: 0px auto;
-    max-width: 1000px; }
-    /* line 891, site.css.scss */
-    .interior-cta .content .column {
-      display: table-cell;
-      text-align: left;
-      vertical-align: middle;
-      width: 50%;
-      padding: 0px 20px 0px 40px; }
-      /* line 897, site.css.scss */
-      .interior-cta .content .column h2 {
-        color: #a2a9ac;
-        font-size: 30px;
-        text-align: right;
-        font-weight: 300;
-        line-height: 1.1;
-        font-style: normal;
-        padding: 0px 20px; }
-      /* line 906, site.css.scss */
-      .interior-cta .content .column p {
-        font-size: 16px;
-        font-weight: 300px;
-        color: #5a6163;
-        text-align: left;
-        line-height: 1.2; }
-        /* line 912, site.css.scss */
-        .interior-cta .content .column p.mousetext {
-          font-size: 14px;
-          font-style: italic; }
-      /* line 917, site.css.scss */
-      .interior-cta .content .column:first-of-type {
-        border-right: 1px solid #ddd;
-        padding: 0px 20px 0px 10px; }
+//
+// Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+//
 
-/* line 924, site.css.scss */
-footer {
-  display: block;
-  width: 85%;
-  font-size: 12px;
-  color: #cccccc;
-  line-height: 1.5;
-  margin: 40px auto;
-  text-align: right; }
-  /* line 932, site.css.scss */
-  footer a {
-    font-size: 16px;
-    color: #2a2a2a;
-    padding: 0px 10px; }
-    /* line 936, site.css.scss */
-    footer a:last-of-type {
-      padding: 0px 0px 0px 10px; }
-    /* line 939, site.css.scss */
-    footer a:hover {
-      text-decoration: underline; }
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
-@media (max-width: 1200px) {
-  /* line 951, site.css.scss */
-  .cd-section.services .content .column .row .block .caption {
-    padding: 10px; }
-    /* line 953, site.css.scss */
-    .cd-section.services .content .column .row .block .caption h2 {
-      font-size: 18px; }
-    /* line 956, site.css.scss */
-    .cd-section.services .content .column .row .block .caption p {
-      font-size: 12px; } }
-@media (max-width: 1000px) {
-  /* line 969, site.css.scss */
-  .interior-content h1 {
-    font-size: 36px; }
-  /* line 972, site.css.scss */
-  .interior-content h2 {
-    font-size: 20px; }
-  /* line 975, site.css.scss */
-  .interior-content p {
-    font-size: 16px; }
-  /* line 979, site.css.scss */
-  .interior-content.amenities .amenities-row {
-    margin: 0px 0px 20px 0px;
-    padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #ddd;
-    display: table;
-    height: 350px; }
-    /* line 985, site.css.scss */
-    .interior-content.amenities .amenities-row:last-of-type {
-      border-bottom: none; }
-    /* line 988, site.css.scss */
-    .interior-content.amenities .amenities-row .column {
-      display: table-cell;
-      vertical-align: middle;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      vertical-align: middle; }
-      /* line 995, site.css.scss */
-      .interior-content.amenities .amenities-row .column:first-of-type {
-        width: 50%;
-        background-color: #000; }
-      /* line 999, site.css.scss */
-      .interior-content.amenities .amenities-row .column:last-of-type {
-        padding: 40px; }
-      /* line 1003, site.css.scss */
-      .interior-content.amenities .amenities-row .column .caption h2 {
-        font-size: 20px; }
+//
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+//
 
-  /* line 1011, site.css.scss */
-  a.outline-btn {
-    font-size: 20px; }
-    /* line 1013, site.css.scss */
-    a.outline-btn.small {
-      font-size: 16px; }
+::-webkit-file-upload-button {
+  font: inherit; // 2
+  -webkit-appearance: button; // 1
+}
 
-  /* line 1017, site.css.scss */
-  input.outline-btn {
-    font-size: 20px; }
-    /* line 1019, site.css.scss */
-    input.outline-btn.small {
-      font-size: 16px; }
+//
+// Correct element displays
+//
 
-  /* line 1027, site.css.scss */
-  .cd-section.contact .content .column h2 {
-    font-size: 28px; }
-  /* line 1030, site.css.scss */
-  .cd-section.contact .content .column p {
-    font-size: 16px; }
-  /* line 1033, site.css.scss */
-  .cd-section.contact .content .column h3 {
-    font-size: 18px; }
-  /* line 1036, site.css.scss */
-  .cd-section.contact .content .column input[type=email], .cd-section.contact .content .column textarea {
-    font-size: 16px; }
-  /* line 1043, site.css.scss */
-  .cd-section.features .content {
-    border-spacing: 10px;
-    width: 96%; }
-    /* line 1046, site.css.scss */
-    .cd-section.features .content .column {
-      padding: 20px; }
-      /* line 1048, site.css.scss */
-      .cd-section.features .content .column h2 {
-        font-size: 20px; }
-      /* line 1051, site.css.scss */
-      .cd-section.features .content .column p {
-        font-size: 16px; }
-      /* line 1054, site.css.scss */
-      .cd-section.features .content .column a.outline-btn {
-        position: relative;
-        margin: 60px 10px 0px 10px; }
-  /* line 1063, site.css.scss */
-  .cd-section.social .content .column {
-    width: 85%; }
-    /* line 1065, site.css.scss */
-    .cd-section.social .content .column h2 {
-      font-size: 28px; }
-  /* line 1074, site.css.scss */
-  .cd-section.about .content .column h2 {
-    font-size: 28px; }
-  /* line 1077, site.css.scss */
-  .cd-section.about .content .column p {
-    font-size: 16px; }
-    /* line 1079, site.css.scss */
-    .cd-section.about .content .column p.mousetext {
-      font-size: 16px; }
+output {
+  display: inline-block;
+}
 
-  /* line 1087, site.css.scss */
-  .interior-content {
-    display: block;
-    width: 85%;
-    max-width: 900px;
-    margin: 0px auto; }
-    /* line 1092, site.css.scss */
-    .interior-content h1 {
-      font-size: 28px; }
-    /* line 1095, site.css.scss */
-    .interior-content h2 {
-      font-size: 20px;
-      padding: 40px 0px 10px 0px; }
-    /* line 1099, site.css.scss */
-    .interior-content h3 {
-      font-size: 18px; }
-    /* line 1104, site.css.scss */
-    .interior-content.team .team-row .column {
-      width: 100%; }
-    /* line 1108, site.css.scss */
-    .interior-content.team .team-row:first-of-type .column {
-      width: 100%; }
-      /* line 1110, site.css.scss */
-      .interior-content.team .team-row:first-of-type .column img {
-        width: 150px; }
+summary {
+  display: list-item; // Add the correct display in all browsers
+  cursor: pointer;
+}
 
-  /* line 1121, site.css.scss */
-  .interior-cta .content .column h2 {
-    font-size: 28px; } }
-@media (max-width: 850px) {
-  /* line 1130, site.css.scss */
-  .interior-content h1 {
-    font-size: 36px; }
-  /* line 1133, site.css.scss */
-  .interior-content h2 {
-    font-size: 20px; }
-  /* line 1136, site.css.scss */
-  .interior-content p {
-    font-size: 16px; }
-  /* line 1140, site.css.scss */
-  .interior-content.amenities .amenities-row {
-    margin: 0px 0px 20px 0px;
-    padding: 0px 0px 20px 0px;
-    border-bottom: 1px solid #ddd;
-    display: block;
-    height: auto; }
-    /* line 1146, site.css.scss */
-    .interior-content.amenities .amenities-row:last-of-type {
-      border-bottom: none; }
-    /* line 1149, site.css.scss */
-    .interior-content.amenities .amenities-row .column {
-      display: block;
-      width: 100%;
-      height: auto;
-      vertical-align: middle;
-      overflow: hidden;
-      position: relative;
-      vertical-align: middle; }
-      /* line 1157, site.css.scss */
-      .interior-content.amenities .amenities-row .column:first-of-type {
-        width: 100%;
-        height: 200px;
-        background-color: #000; }
-      /* line 1162, site.css.scss */
-      .interior-content.amenities .amenities-row .column:last-of-type {
-        padding: 0px; }
-      /* line 1166, site.css.scss */
-      .interior-content.amenities .amenities-row .column .caption h2 {
-        font-size: 20px; }
+template {
+  display: none; // Add the correct display in IE
+}
 
-  /* line 1174, site.css.scss */
-  header {
-    padding: 40px 0px;
-    background-size: cover; }
-    /* line 1177, site.css.scss */
-    header img {
-      max-width: 200px; } }
-@media (max-width: 750px) {
-  /* line 1184, site.css.scss */
-  .overlay nav {
-    position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    text-align: center; }
-  /* line 1192, site.css.scss */
-  .overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%; }
-    /* line 1199, site.css.scss */
-    .overlay ul li {
-      display: block;
-      height: 25%;
-      height: calc(100% / 6);
-      min-height: 50px;
-      position: relative;
-      opacity: 0; }
-      /* line 1206, site.css.scss */
-      .overlay ul li a {
-        display: block;
-        position: relative;
-        color: #a3a8ab;
-        text-decoration: none;
-        overflow: hidden;
-        transition: all 0.5s ease; }
-        /* line 1213, site.css.scss */
-        .overlay ul li a:hover {
-          color: #000000; }
-        /* line 1216, site.css.scss */
-        .overlay ul li a.active {
-          color: #000000; }
-
-  /* line 1224, site.css.scss */
-  .logo-home {
-    display: none; }
-
-  /* line 1227, site.css.scss */
-  .button_container.home, .button_container {
-    top: 35px;
-    left: 7.5%; }
-
-  /* line 1231, site.css.scss */
-  .cd-section {
-    width: calc(100%);
-    margin-left: 0px;
-    min-height: inherit; }
-    /* line 1236, site.css.scss */
-    .cd-section.video .content {
-      min-height: inherit;
-      display: block;
-      width: calc(100%);
-      margin-left: 0px; }
-    /* line 1243, site.css.scss */
-    .cd-section.social {
-      background: #ffffff; }
-    /* line 1247, site.css.scss */
-    .cd-section.contact .content {
-      width: 95%;
-      height: inherit; }
-      /* line 1250, site.css.scss */
-      .cd-section.contact .content .column {
-        display: block;
-        width: 100%;
-        height: auto;
-        padding: 20px 10px; }
-        /* line 1255, site.css.scss */
-        .cd-section.contact .content .column:first-of-type {
-          padding: 0px;
-          height: 200px; }
-        /* line 1259, site.css.scss */
-        .cd-section.contact .content .column #map {
-          display: block;
-          width: 100%;
-          height: 100%; }
-    /* line 1268, site.css.scss */
-    .cd-section.features .content {
-      display: block;
-      border-collapse: separate;
-      border-spacing: 20px;
-      max-width: 1200px;
-      width: 95%; }
-      /* line 1274, site.css.scss */
-      .cd-section.features .content .column {
-        display: block;
-        margin: 20px 0px; }
-    /* line 1281, site.css.scss */
-    .cd-section.social .content {
-      display: block;
-      padding: 60px 40px;
-      min-height: 90vh;
-      height: auto;
-      max-width: auto;
-      width: 100%; }
-      /* line 1288, site.css.scss */
-      .cd-section.social .content .column {
-        display: block;
-        vertical-align: middle;
-        width: 100%;
-        padding: 0px;
-        height: auto;
-        text-align: center; }
-        /* line 1295, site.css.scss */
-        .cd-section.social .content .column h2 {
-          text-align: center; }
-        /* line 1298, site.css.scss */
-        .cd-section.social .content .column:first-of-type {
-          width: 100%; }
-          /* line 1300, site.css.scss */
-          .cd-section.social .content .column:first-of-type a {
-            display: inline-block;
-            width: 75px;
-            height: 75px;
-            border: 4px solid #cddeed;
-            border-radius: 50%;
-            text-align: center;
-            margin: 0px 5px 20px 0px;
-            cursor: pointer;
-            cursor: hand;
-            transition: all 0.5s ease; }
-            /* line 1311, site.css.scss */
-            .cd-section.social .content .column:first-of-type a i {
-              margin: 10px 0px 0px 0px; }
-            /* line 1314, site.css.scss */
-            .cd-section.social .content .column:first-of-type a:hover {
-              background: rgba(205, 222, 237, 0.1); }
-    /* line 1323, site.css.scss */
-    .cd-section.services .content {
-      display: block;
-      padding: 20px 0px 30px 0px;
-      min-height: inherit;
-      height: auto;
-      max-width: auto;
-      width: 95%; }
-      /* line 1330, site.css.scss */
-      .cd-section.services .content .column {
-        display: block;
-        text-align: left;
-        vertical-align: top;
-        width: 100%;
-        padding: 0px;
-        height: 500px; }
-        /* line 1337, site.css.scss */
-        .cd-section.services .content .column:first-of-type {
-          margin-bottom: 20px; }
-        /* line 1340, site.css.scss */
-        .cd-section.services .content .column .row {
-          display: table;
-          height: 33.33333333333333%;
-          width: calc(100% + 5px);
-          border-collapse: separate;
-          border-spacing: 10px 5px; }
-          /* line 1346, site.css.scss */
-          .cd-section.services .content .column .row .block {
-            display: table-cell;
-            height: 100%;
-            width: auto;
-            overflow: hidden;
-            position: relative;
-            background: #000;
-            vertical-align: middle; }
-            /* line 1354, site.css.scss */
-            .cd-section.services .content .column .row .block .caption {
-              display: none;
-              position: absolute;
-              width: 100%;
-              color: #fff;
-              bottom: 0;
-              padding: 20px;
-              z-index: 999; }
-              /* line 1362, site.css.scss */
-              .cd-section.services .content .column .row .block .caption h2 {
-                color: #ffffff;
-                font-size: 16px;
-                text-align: left;
-                font-weight: 300;
-                line-height: 1.1;
-                font-style: normal;
-                padding: 0px 0px 10px 0px; }
-              /* line 1371, site.css.scss */
-              .cd-section.services .content .column .row .block .caption p {
-                font-size: 12px;
-                font-weight: 300px;
-                color: #ffffff;
-                text-align: left;
-                line-height: 1.2;
-                max-width: 360px;
-                padding: 0px; }
-    /* line 1386, site.css.scss */
-    .cd-section.about {
-      padding: 20px; }
-      /* line 1388, site.css.scss */
-      .cd-section.about .content {
-        display: block;
-        width: 98%; }
-        /* line 1391, site.css.scss */
-        .cd-section.about .content .column {
-          display: block;
-          text-align: left;
-          vertical-align: middle;
-          width: 100%;
-          padding: 0px 10px; }
-          /* line 1397, site.css.scss */
-          .cd-section.about .content .column h2 {
-            text-align: left;
-            padding: 0px 0px 20px 0px; }
-          /* line 1401, site.css.scss */
-          .cd-section.about .content .column:first-of-type {
-            border-right: none;
-            padding: 0px 10px; }
-
-  /* line 1410, site.css.scss */
-  .interior-cta .content {
-    display: block;
-    padding: 60px 0px;
-    margin: 0px auto;
-    width: 85%; }
-    /* line 1415, site.css.scss */
-    .interior-cta .content .column {
-      display: block;
-      text-align: left;
-      vertical-align: middle;
-      width: 100%;
-      padding: 0px 0px; }
-      /* line 1421, site.css.scss */
-      .interior-cta .content .column h2 {
-        text-align: left;
-        padding: 0px 0px 20px 0px; }
-      /* line 1425, site.css.scss */
-      .interior-cta .content .column:first-of-type {
-        border-right: none;
-        padding: 0px 0px; }
-
-  /* line 1432, site.css.scss */
-  .cd-nav-trigger {
-    display: none; }
-
-  /* line 1435, site.css.scss */
-  .no-touch #cd-vertical-nav {
-    display: none; }
-
-  /* line 1438, site.css.scss */
-  footer {
-    display: block;
-    width: 85%;
-    font-size: 12px;
-    color: #cccccc;
-    line-height: 1.5;
-    margin: 40px auto;
-    text-align: center; }
-    /* line 1446, site.css.scss */
-    footer a {
-      font-size: 16px;
-      color: #2a2a2a;
-      padding: 0px 10px; }
-      /* line 1450, site.css.scss */
-      footer a:last-of-type {
-        padding: 0px 0px 0px 10px; }
-      /* line 1453, site.css.scss */
-      footer a:hover {
-        text-decoration: underline; } }
+// Always hide an element with the `hidden` HTML attribute (from PureCSS).
+// Needed for proper display in IE 10-.
+[hidden] {
+  display: none !important;
+}
