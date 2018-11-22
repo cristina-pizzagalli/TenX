@@ -6,13 +6,19 @@ body {
   font-family: NexaRegular;	
 }
 h1 {
-	padding: 40px 0;
+	padding: 5% 20% 0 5%;
+  font-size: 22px;
+  color: #037BAC;
+  line-height: 1.2;
+}
+h1 span {
+  font-family: NexaBold;
 }
 .map-contain {
 	display: block;
 	width: 80%;
 	height: auto;
-	margin: 0 auto;
+	margin: 20px auto;
 }
 .map-wrap {
 	display: block;
@@ -33,9 +39,43 @@ div[class*="location"] {
 	position: absolute;
 	cursor: pointer;
 	cursor: hand;
+  font-size: 20px;
   transition: all 0.1s ease-in-out;
 	box-shadow: 0 0 0 rgba(3,123,172, 0.4);
-	animation: pulse 2s infinite;
+	animation: pulse 1s infinite;
+  z-index: 25;
+}
+div[id*="location"] a {
+  opacity: 1;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  text-transform: capitalize;
+  line-height: 20px;
+}
+div[id*="location"] a:hover {
+  text-decoration: underline;
+}
+div[id*="location"] a img {
+  width: 20px;
+  height: auto;
+  position: relative;
+  margin-bottom: -5px;
+  margin-right: 5px;
+}
+connection {
+  z-index: 22;
+  border: 1px solid;
+  border-radius: 100%;
+  color: rgba(0, 0, 0, 0.2);
+}
+.tippy-backdrop {
+  background: #0060A2 !important;
+}
+.tippy-backdrop a {
+  display: none;
 }
 @keyframes pulse {
   0% {
@@ -77,8 +117,8 @@ div[class*="location"]:hover {
 }
 /* Barrie, ON */
 .location-5 {
-	top: calc(50% - 10px);
-	left: 39.5%;
+	top: 50.5%;
+	left: 39%;
 }
 /* Front St, Toronto, ON */
 .location-6 {
@@ -88,30 +128,69 @@ div[class*="location"]:hover {
 /* King St, Toronto ON */
 .location-7 {
   top: 50%;
-  left: calc(40% + 10px);
+  left: calc(40% + 9px);
 }
 /* Pullman Ct, Toronto, ON */
 .location-8 {
-  top: calc(50% + 10px);
+  top: calc(50% + 9px);
   left: 40.25%;
 }
 /* Horner Ave, Toronto, ON */
 .location-9 {
-  top: calc(50% + 10px);
-  left: calc(40.25% + 10px);
+  top: calc(50% + 9px);
+  left: calc(40.25% + 9px);
 }
 /* Kirkland, MTL */
 .location-10 {
-	top: 46.5%;
-	left: 63%;
+	top: 48.5%;
+	left: 44%;
 }
 /* Beaver Hall, MTL */
 .location-11 {
-	top: 56.5%;
-	left: 63%;
+	top: 47.5%;
+	left: 45%;
 }
 /* Portsmouth, UK */
 .location-12 {
-	top: 56.5%;
-	left: 83%;
+	top: 41.5%;
+	left: 94.5%;
+}
+@media only screen and (max-width: 700px) {
+  h1 {
+    padding: 2%;
+    font-size: 18px;
+  }
+  div[class*="location"] {
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #037BAC;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    cursor: hand;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 0 0 rgba(3,123,172, 0.4);
+    animation: pulse 2s infinite;
+  }
+  /* Front St, Toronto, ON */
+  .location-6 {
+    top: 50%;
+    left: 40%;
+  }
+  /* King St, Toronto ON */
+  .location-7 {
+    top: 50%;
+    left: calc(40% + 6px);
+  }
+  /* Pullman Ct, Toronto, ON */
+  .location-8 {
+    top: calc(50% + 6px);
+    left: 40.25%;
+  }
+  /* Horner Ave, Toronto, ON */
+  .location-9 {
+    top: calc(50% + 6px);
+    left: calc(40.25% + 6px);
+  }
 }

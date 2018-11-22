@@ -7,25 +7,179 @@
     <link href="stylesheets/site.css" rel="stylesheet" />
     <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
     <script src="javascripts/all.js"></script>
-    <script src="javascripts/jquery-2.1.1.js"></script>
-  </head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="javascripts/jquery.connections.js"></script>
+    <script>
+      $(document).ready(function() {
+          $('.location-1').connections({ to: '.location-2' });
+          $('.location-3').connections({ to: '.location-2' });
+          $('.location-1').connections({ to: '.location-4' });
+          $('.location-5').connections({ to: '.location-3' });
+          $('.location-9').connections({ to: '.location-10' });
+          $('.location-11').connections({ to: '.location-12' });
+          $('.location-10').connections({ to: '.location-4' });
+          $('.location-12').connections({ to: '.location-4' });          
+          var connections = $('connection, inner');
+          setInterval(function() { connections.connections('update') }, 100);
+          tippy('.location-1', {
+            content: document.querySelector('#location-1'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true',
+            inertia: 'true',
+            showOnInit: 'true'
+          });
+          tippy('.location-2', {
+            content: document.querySelector('#location-2'),
+            delay: 100,
+            placement: 'right',
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-3', {
+            content: document.querySelector('#location-3'),
+            delay: 100,
+            placement: 'right',
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-4', {
+            content: document.querySelector('#location-4'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-5', {
+            content: document.querySelector('#location-5'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-6', {
+            content: document.querySelector('#location-6'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-7', {
+            content: document.querySelector('#location-7'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-8', {
+            content: document.querySelector('#location-8'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-9', {
+            content: document.querySelector('#location-9'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-10', {
+            content: document.querySelector('#location-10'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-11', {
+            content: document.querySelector('#location-11'),
+            delay: 100,
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+          tippy('.location-12', {
+            content: document.querySelector('#location-12'),
+            delay: 100,
+            placement: 'left',
+            size: 'large',
+            duration: 500,
+            animation: 'scale',
+            interactive: 'true'
+          });
+        });
+    </script>
+  </head      
   <body class="index">
     <div class="map-contain">
-    <h1>This is an amazing map</h1>
     <div class="map-wrap">
-      <div class="location-1" data-tippy="Miami, FL"></div>
-      <div class="location-2" data-tippy="Los Angeles, CA"></div>
-      <div class="location-3" data-tippy="Vancouver, BC"></div>
-      <div class="location-4" data-tippy="New York, NY"></div>
-      <div class="location-5" data-tippy="Barrie, ON"></div>
-      <div class="location-6" data-tippy="Front St, Toronto"></div>
-      <div class="location-7" data-tippy="King St, Toronto"></div>
-      <div class="location-8" data-tippy="Pullman Ct, Toronto"></div>
-      <div class="location-9" data-tippy="Horner Ave, Toronto"></div>
-      <div class="location-10" data-tippy="Kirkland, Montreal"></div>
-      <div class="location-11" data-tippy="Beaver Hall, Montreal"></div>
-      <div class="location-12" data-tippy="Portsmouth, UK"></div>
+
+      <h1><span>Cogeco Peer 1</span> this is a catchy headline about colocation services.</h1>
+      <div class="location-1"></div>
+      <div class="location-2"></div>
+      <div class="location-3"></div>
+      <div class="location-4"></div>
+      <div class="location-5"></div>
+      <div class="location-6"></div>
+      <div class="location-7"></div>
+      <div class="location-8"></div>
+      <div class="location-9"></div>
+      <div class="location-10"></div>
+      <div class="location-11"></div>
+      <div class="location-12"></div>
     </div>
   </div>
+  <div id="location-1">
+    Miami, FL<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-2">
+    Los Angeles, CA<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-3">
+    Vancouver, BC<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-4">
+    New York, NY<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-5">
+    Barrie, ON<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-6">
+    Front St, Toronto<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>  
+  <div id="location-7">
+    King St, Toronto<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-8">
+    Pullman CT, Toronto<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-9">
+    Horner Ave, Toronto<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-10">
+    Kirkland, Montreal<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-11">
+    Beaver Hall, Montreal<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>
+  <div id="location-12">
+    Portsmouth, UK<br/><a href="https://cp1.com/2wZvxsp"><img src="images/download.png"/>Download datasheet</a>
+  </div>  
+
   </body>
 </html>
