@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Test</title>
+    <link href="stylesheets/site.css" rel="stylesheet" />
+    <script src="javascripts/all.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      $(document).on('click', 'a[href^="#"]', function (event) {
+          event.preventDefault();
+
+          $('html, body').animate({
+              scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+      });
+      $(window).scroll(function(){
+    if ($(window).scrollTop() >= 200) {
+        $('#anchor').addClass('fixed-header');
+        $('#anchor').addClass('visible-title');
+    }
+    else {
+        $('#anchor').removeClass('fixed-header');
+        $('#anchor').removeClass('visible-title');
+    }
+});
+
+    </script>
+
+  </head>
+  <body class="index">
+    <header>
+      
+    </header>
+      <nav id="anchor"><a href="#advantage">The cloud advantage</a><a href="#whichcloud">Which cloud?</a><a href="#nextsteps">Next steps</a></nav>
+    <div class="intro-bg">
+      <section id="intro">
+        <h2>Your cloud, your journey</h2>
+        <h3>Your guide to the why, what and how of evolving with the cloud. Or not...</h3>
+        <h4>The cloud is not  a destination.</h4>
+        <p>Let's clear up something right here at the beginning of your journey. Your journey to the cloud is not one journey, but many. </p>
+        <p>That is because the cloud is not a singular destination. You would not know that, contrary to  given the direction narrative of many cloud discussions in the market. It’s It is common to make the cloud sounds as if it's it is a place where you arrive. As though you're you are at A, the cloud is B, and all you need to do is get from A to B.</p>
+        <p>But the cloud isn't is not your destination, is it? The cloud is simply a part of your mission-critical business. You must adapt to and straddle different worlds  in ways that make sense for your business. One of those worlds is the cloud .</p>
+        <p>But even though the cloud is not your destination, you'reyou are still on a journey. Maybe you call it your digital transformation journey. Or your hybrid IT journey. What matters is that your organization’s transformation is catalysed by the cloud. Your workloads and apps move at different times, to different endpoints or cloud platforms. </p>
+        <p>Your cloud journey is multiple journeys, with multiple destinations. And as technologies evolve, new destinations become available, empowering your business to evolve. Some of your journeys will end. Other journeys will start.</p>
+      </section>
+    </div>
+    <section id="advantage" class="content">
+      <h2>The cloud advantage</h2>
+      <h3>Why you should start a cloud journey</h3>
+      <p>Cloud has emerged as a platform that can unshackle IT from the manual efforts, processes and procedures of traditional legacy environments. It does this by creating highly secure, highly automated and highly agile hybrid environments designed for IT ease, management and accountability. </p>
+      <p>If your organization is just starting your cloud journey, the incentive is likely your need for greater agility . You need to rapidly increase your cloud maturity to improve organizational security . And you need to enhance your ability to adapt quickly to changing conditions, and scale up (or down) at a moment’s notice.</p>
+      <p>Cloud computing has a number of benefits. If architected and deployed the right way with the right partner, cloud gives you greater flexibility, agility and control of your IT. It is typically more cost-effective, and is often used in a hybrid solution with hosted, collocated and traditional on-premises IT infrastructure.</p>
+      <h4>Top reasons why organizations are on a cloud journey</h4>
+      <section class="columns">
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_SAVINGS.jpg"/>
+          <h2>Decrease capital costs</h2>
+          <p>Replace on-premises servers and storage with server scalable compute capacity and storage capacity on demand</p>
+        </div>
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_NETWORK_OPS_CENTRE.jpg"/>
+          <h2>Reduce operational IT costs</h2>
+          <p>Save money by managing less internal IT infrastructure</p>
+        </div>
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_BENEFITS.jpg"/>
+          <h2>Be more<br/>agile</h2>
+          <p>Provision servers and VMs in hours instead of days or weeks</p>
+        </div>
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_GROWTH.jpg"/>
+          <h2>Scale up digital transformation</h2>
+          <p>Create and deliver digitally enhanced products, services and experiences</p>
+        </div>        
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_CUSTOMER_INSPIRED.jpg"/>
+          <h2>Gain competitive advantage</h2>
+          <p>Get to market with new products and services before competitors do</p>
+        </div>
+        <div class="column">
+          <img src="images/CP1_Icon_Value_Prop_RGB_OPTIMIZED.jpg"/>
+          <h2>Boost IT efficiency</h2>
+          <p>Only allocate and pay for compute, storage and network resources that are actually used</p>
+        </div>
+      </section>
+      <div class="cubes"></div>
+
+      <div class="cta"><a href="#">Are you ready for the cloud? Get your free cloud readiness report.</a></div>
+    </section>
+    <section id="whichcloud" class="content">
+    </section>
+    <section id="nextsteps" class="content">
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>

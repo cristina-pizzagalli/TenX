@@ -1,0 +1,170 @@
+
+@import 'reset.css';
+@import 'fonts.css';
+
+
+body {
+  font-family: NexaRegular;	
+  background: url(../images/bg-lines-dk.png);
+  background-position: left;
+}
+h1 {
+  font-size: 40px;
+  color: #01a8ec;
+  line-height: 1.2;  
+}
+nav#anchor {
+  display: block;
+  width: 100%;
+  background: #00a8ec;
+  text-align: center;
+}
+nav#anchor a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  color: #ffffff;
+  padding: 1.5%;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+.intro-bg {
+  background: url(../images/cubes.png), url(../images/intro-illo.png), url(../images/bg-lines.png);
+  background-position: left top, right bottom, left;
+  background-repeat: no-repeat, no-repeat, repeat;
+
+}
+section {
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+section#intro {
+  padding: 60px 0;
+}
+section#intro h2 {
+  font-family: NexaBold;
+  color: #004282;
+  font-size: 40px;
+  line-height: 1.2;
+  padding: 20px 0 0px 0;
+}
+section#intro h3 {
+  font-family: NexaBold;
+  color: #004282;
+  font-size: 28px;
+  max-width: 600px;
+  line-height: 1.2;
+  padding: 20px 0 20px 0;
+}
+section#intro h4 {
+  font-family: NexaBold;
+  color: #004282;
+  font-size: 22px;
+  max-width: 600px;
+  line-height: 1.2;
+  padding: 20px 0 20px 0;
+}
+section#intro p {
+  max-width: 60%;
+  font-synthesis: 18px;
+}
+section.content h2 {
+  text-align: center;
+  font-family: NexaBold; 
+  padding: 40px 0 30px;
+  font-size: 12px;
+  color: #a5b7c8;
+  text-transform: uppercase;
+}
+section.content h3 {
+  font-family: NexaBold; 
+  color: #004282;
+  font-size: 32px;
+  padding: 20px 0 20px 0;
+}
+section.content h4 {
+  text-align: center;
+  color: #004282;
+  font-family: NexaBold;
+  font-size: 22px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+section p {
+  font-size: 16px;
+  color: #667e95;
+  padding: 10px 0;
+  line-height: 1.4;
+}
+.cubes {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: -80px;
+  width: 161px;
+  height: 239px;
+  background: url(../images/cubes.png);
+  z-index: -1;
+}
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.column {
+  flex: 1;
+  flex-basis: 10%;
+  margin: 10px 5px;
+  background: #ffffff;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #f18f01;
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}
+.column img {
+  width: 50%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+.column h2 {
+  font-size: 12px;
+  padding: 20px 0 !important;
+  color: #03a9ec !important;
+}
+.column p {
+  font-size: 14px;
+  padding: 0 !important;
+}
+@media screen and (max-width: 1400px) {
+  .columns .column {
+    margin: 10px;
+    flex-basis: 20%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 10px 0;
+  }
+}
