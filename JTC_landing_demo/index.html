@@ -7,6 +7,7 @@
     <link href="stylesheets/site.css" rel="stylesheet" />
     <script src="javascripts/all.js"></script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script>
       $(document).on('click', 'a[href^="#"]', function (event) {
           event.preventDefault();
@@ -16,18 +17,29 @@
           }, 500);
       });
       $(window).scroll(function(){
-    if ($(window).scrollTop() >= 200) {
-        $('#anchor').addClass('fixed-header');
-        $('#anchor').addClass('visible-title');
-    }
-    else {
-        $('#anchor').removeClass('fixed-header');
-        $('#anchor').removeClass('visible-title');
-    }
-});
-
+        if ($(window).scrollTop() >= 200) {
+            $('#anchor').addClass('fixed-header');
+            $('#anchor').addClass('visible-title');
+        }
+        else {
+            $('#anchor').removeClass('fixed-header');
+            $('#anchor').removeClass('visible-title');
+        }
+      });
+      $(function(){
+        $('nav#anchor a').click(function(){
+          $(this).addClass('active').siblings().removeClass('active')  
+        })
+      })
+      $(function () {
+        $(window).scroll(function () {
+            var top_offset = $(window).scrollTop();
+            if (top_offset == 0) {
+                $('nav#anchor a').removeClass('active');
+            }
+        })
+    });
     </script>
-
   </head>
   <body class="index">
     <header>
@@ -39,48 +51,54 @@
       <section id="intro">
         <h2>Your cloud, your journey</h2>
         <h3>Your guide to the why, what and how of evolving with the cloud. <br/>Or not...</h3>
-        <h4>The cloud is not  a destination.</h4>
-        <p>Let's clear up something right here at the beginning of your journey. Your journey to the cloud is not one journey, but many. </p>
-        <p>That is because the cloud is not a singular destination. You would not know that, contrary to  given the direction narrative of many cloud discussions in the market. It’s It is common to make the cloud sounds as if it's it is a place where you arrive. As though you're you are at A, the cloud is B, and all you need to do is get from A to B.</p>
-        <p>But the cloud isn't is not your destination, is it? The cloud is simply a part of your mission-critical business. You must adapt to and straddle different worlds  in ways that make sense for your business. One of those worlds is the cloud .</p>
-        <p>But even though the cloud is not your destination, you'reyou are still on a journey. Maybe you call it your digital transformation journey. Or your hybrid IT journey. What matters is that your organization’s transformation is catalysed by the cloud. Your workloads and apps move at different times, to different endpoints or cloud platforms. </p>
+        <h4>The cloud is not a destination.</h4>
+        <p>Let's clear up something right here at the beginning of your journey. Your journey to the cloud is not <em>one</em> journey, but many.</p>
+        <p>That is because the cloud is not a singular destination, contrary to the narrative of many cloud discussions in the market. It is common to make the cloud sound as if it is a place where you arrive. As though you are at A, the cloud is B, and all you need to do is get from A to B.</p>
+        <p>But the cloud is not your destination, is it? The cloud is simply a part of your mission-critical business. You must adapt to and straddle different IT deployments in ways that make sense for your business. One of those is the cloud, and an initial move to a cloud platform is just the first step. As you optimize your IT environment, the cloud will continue to evolve.</p>
+        <p>But even though the cloud is not your destination, you are still on a journey. Maybe you call it your digital transformation journey. Or your hybrid IT journey. What matters is that your organization’s transformation is catalysed by the cloud. Your workloads and apps move at different times, to different endpoints or cloud platforms.</p>
         <p>Your cloud journey is multiple journeys, with multiple destinations. And as technologies evolve, new destinations become available, empowering your business to evolve. Some of your journeys will end. Other journeys will start.</p>
       <div class="intro-illo"></div>
+      <div class="cubes-intro"></div>
       </section>
     </div>
+    <div class="overview-bg">
     <section id="overview" class="content">
-
-        <h2>On your journey to the cloud, you need a guide.</h2>
+      <h2>On your journey to the cloud,<br/>you need a guide.</h2>
       <div class="float">
         <p>The one companion who is along for the journey, regardless of the journey you are on, is your data. Your data needs to be accessible, able to move between applications and locations on different platforms, efficiently. It must remain secure at all times, whether at rest or in transit.</p>
         <p>So how do you navigate this cloud journey? How do you decide if your data stays on-premise or moves to colocation, if it gets hosted in a private cloud or in a hyperscale cloud? You navigate with the help of a partner — someone who guides you on your journey to many destinations. Someone who helps your business connect and secure your hybrid environment.</p>
         <p>Remember, the cloud is not an "out of the box" option. Your situation is unique and requires careful planning and analysis. It requires a partner who has your back and who ensures you are positioned for success.</p>
+        <a href="#" class="blue-btn"><i class="far fa-calendar-alt"></i>  Book your cloud readiness assessment</a>
       </div>
         <div class="sidebar">
-          Why your cloud is not a destination
-Some of your workloads and apps:
-·     will never get to the cloud
-·     will remain on-premise
-·     will find a home in colocation
-·     will be hosted in a private cloud
-·     will be hosted in a hyperscale cloud
-·     will be replaced by SaaS
-
+          <img src="images/CP1_Icon_Cloud_RGB_MCC.jpg"/>
+          <h3>Why your cloud is not a destination</h3>
+          <p>Some of your workloads and apps:
+            <ul>
+              <li>will never get to the cloud</li>
+              <li>will remain on-premise</li>
+              <li>will find a home in colocation</li>
+              <li>will be hosted in a private cloud</li>
+              <li>will be hosted in a hyperscale cloud</li>
+              <li>will be replaced by SaaS</li>
+            </ul>
         </div>
         <div class="clear"></div>
+        <div class="overview-cubes"></div>
       </section>
+    </div>
     <section id="advantage" class="content">
       <h2>The cloud advantage</h2>
       <h3>Why you should start a cloud journey</h3>
-      <p>Cloud has emerged as a platform that can unshackle IT from the manual efforts, processes and procedures of traditional legacy environments. It does this by creating highly secure, highly automated and highly agile hybrid environments designed for IT ease, management and accountability. </p>
-      <p>If your organization is just starting your cloud journey, the incentive is likely your need for greater agility . You need to rapidly increase your cloud maturity to improve organizational security . And you need to enhance your ability to adapt quickly to changing conditions, and scale up (or down) at a moment’s notice.</p>
+      <p>Cloud has emerged as a platform that can unshackle IT from the manual efforts, processes and procedures of traditional legacy environments. It does this by creating highly secure, highly automated and highly agile hybrid environments designed for IT ease, management and accountability.</p>
+      <p>If your organization is just starting your cloud journey, the incentive is likely your need for greater agility and efficiency. And you need to enhance your ability to adapt quickly to changing conditions, and scale up (or down) at a moment’s notice.</p>
       <p>Cloud computing has a number of benefits. If architected and deployed the right way with the right partner, cloud gives you greater flexibility, agility and control of your IT. It is typically more cost-effective, and is often used in a hybrid solution with hosted, collocated and traditional on-premises IT infrastructure.</p>
       <h4>Top reasons why organizations are on a cloud journey</h4>
       <section class="columns">
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_SAVINGS.jpg"/>
           <h2>Decrease capital costs</h2>
-          <p>Replace on-premises servers and storage with server scalable compute capacity and storage capacity on demand</p>
+          <p>Replace on-premise servers and storage with scalable compute and storage capacity on demand</p>
         </div>
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_NETWORK_OPS_CENTRE.jpg"/>
@@ -94,7 +112,7 @@ Some of your workloads and apps:
         </div>
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_GROWTH.jpg"/>
-          <h2>Scale up digital transformation</h2>
+          <h2>Accelerate digital transformation</h2>
           <p>Create and deliver digitally enhanced products, services and experiences</p>
         </div>        
         <div class="column">
@@ -113,48 +131,59 @@ Some of your workloads and apps:
       <div class="cta"><a href="#">Are you ready for the cloud? Get your free cloud readiness report.</a></div>
     </section>
     <section id="whichcloud" class="content">
-            <h2>The cloud advantage</h2>
-      <h3>Why you should start a cloud journey</h3>
-      <p>Cloud has emerged as a platform that can unshackle IT from the manual efforts, processes and procedures of traditional legacy environments. It does this by creating highly secure, highly automated and highly agile hybrid environments designed for IT ease, management and accountability. </p>
-      <p>If your organization is just starting your cloud journey, the incentive is likely your need for greater agility . You need to rapidly increase your cloud maturity to improve organizational security . And you need to enhance your ability to adapt quickly to changing conditions, and scale up (or down) at a moment’s notice.</p>
-      <p>Cloud computing has a number of benefits. If architected and deployed the right way with the right partner, cloud gives you greater flexibility, agility and control of your IT. It is typically more cost-effective, and is often used in a hybrid solution with hosted, collocated and traditional on-premises IT infrastructure.</p>
-      <h4>Top reasons why organizations are on a cloud journey</h4>
+      <h2>Which Cloud?</h2>
+      <h3>Consider these factors when evaluating your cloud options</h3>
+      <p>Many organizations think their journey is simply deploying servers and virtual machines into a cloud — whether it is Azure, AWS or their own private cloud. But the cloud is a lot more complex than just spinning up a virtual machine. The cloud journey simply begins there.</p>
+      <h4>Digital transformation</h4>
+      <p>AAccording to industry research firm IDC, digital transformation will soon reach macroeconomic scales. By 2021, at least 50 percent of the global GDP will be digitized, with growth in every industry driven by digitally enhanced offerings, operations and relationships.</p>
+      <p>Collaboration and access to information is key. Brainstorming a new idea or business concept — then testing it and rolling it out in weeks, days or even hours — is the pace that business innovation is occurring at today. Cloud is the enabler of this new speed of innovation.</p>
+      <h4>Evaluating your cloud options</h4>
+      <p>If your business is typical, you likely will not migrate everything to the cloud, and certainly not in one move. You will keep some of your compute, storage and network resources on-premises and host some of them in the cloud in a hybrid IT environment. The cloud is an evolution — workloads move and are optimised. Again, it is not simply a case of moving from A to B.</p>
+      <p>Hybrid IT environments feature two or more of the following infrastructure options:</p>
       <section class="columns">
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_SAVINGS.jpg"/>
-          <h2>Decrease capital costs</h2>
-          <p>Replace on-premises servers and storage with server scalable compute capacity and storage capacity on demand</p>
+          <h2>On-premises / self-managed</h2>
+          <p>This is the traditional deployment model in which end users employ an IT department to manage IT assets — hardware and software — owned by the company. With the exception of firms born in the cloud, virtually 100 percent of businesses use this deployment model.</p>
         </div>
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_NETWORK_OPS_CENTRE.jpg"/>
-          <h2>Reduce operational IT costs</h2>
-          <p>Save money by managing less internal IT infrastructure</p>
+          <h2>Colocation</h2>
+          <p>The practice of using a third-party data center for the housing of servers and other IT devices is called colocation. End users retain ownership of the servers but use the building, connectivity, power and security services of specialized providers.</p>
         </div>
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_BENEFITS.jpg"/>
-          <h2>Be more<br/>agile</h2>
-          <p>Provision servers and VMs in hours instead of days or weeks</p>
+          <h2>Hosting</h2>
+          <p>In this deployment model, vendors not only provide the data center facility, security, power and cooling, but also the servers and required storage. This allows for a high degree of customization and control, with predicatable costs. It also provides access to managed services to look after your infrastructure, network, operating systems, hypervisors and databases.</p>
         </div>
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_GROWTH.jpg"/>
-          <h2>Scale up digital transformation</h2>
-          <p>Create and deliver digitally enhanced products, services and experiences</p>
+          <h2>Cloud</h2>
+          <p>Cloud is about leveraging the power of network and IT assets to their maximum effect. This potential brings complexity with it. Whether it is private cloud (on-premises or hosted in a data center), public or hyperscale – important decisions will need to be made around IaaS, PaaS and SaaS. There are many paths in the cloud, and unmitigated complexity can impede decision-making.</p>
         </div>        
         <div class="column">
           <img src="images/CP1_Icon_Value_Prop_RGB_CUSTOMER_INSPIRED.jpg"/>
-          <h2>Gain competitive advantage</h2>
-          <p>Get to market with new products and services before competitors do</p>
-        </div>
-        <div class="column">
-          <img src="images/CP1_Icon_Value_Prop_RGB_OPTIMIZED.jpg"/>
-          <h2>Boost IT efficiency</h2>
-          <p>Only allocate and pay for compute, storage and network resources that are actually used</p>
+          <h2>Connectivity</h2>
+          <p>Network connectivity must be a pillar of a hybrid solution. The ability to move data efficiently and securely across a hybrid environment and achieve the low latencies necessary to unlock the full potential of cloud is vital. Having this holistic view of a hybrid environment that includes connectivity will enable cloud investments to be optimised and should be a view shared by you cloud partner.</p>
         </div>
       </section>
+      <div class="testimonial">“It starts with attempting to solve a business problem, then evaluating the options. Cloud may not always be the right option. Whether that is the case or not, a holistic approach to solution architecture that encompasses the platform choice, security and connectivity is the best way to ensure business outcomes are met — and ROI is proven.” — Jason Vigus, Cogeco Peer 1 Product Manager, Managed & Professional Services</div>
+      <h3>The value of taking a guide along on your journey</h3>
+      <p>On your cloud journey, you will likely need a guide to complement your existing IT staff with professional IT services. A good partner helps you manage your journey to the cloud by helping you make sense of complex hosting environments and connectivity deployments.</p>
+      <p>A partner also helps you prepare for and then migrate applications and data from on-premises to public, private or hybrid cloud. A partner can assess options and help you determine the right platforms for each workload – cloud or otherwise. They can architect, design and build a solution including connectivity and security in these phases.</p>
+      <p>Further, your cloud partner can provide expert project management and be able to plan and execute the migration of data and application to a new environment, then be able to handle the ongoing management once it is live.</p>
+      <p>In essence, a partner on your journey to the cloud extends the power of your technical teams with deep expertise in technologies and processes that help you achieve strategic business outcomes.</p>
+      <p>Some partners can help you at the consulting end of things, some can help you at the hardware and software end, and some can help throughout your journey, no matter where your destination happens to be. A partner such as Cogeco Peer 1, for example, can help you with:</p>
+      <ul>
+        <li>Managed IT services</li>
+        <li>Assessment, design, build, migration and project management</li>
+        <li>Managed cloud</li>
+        <li>Colocation</li>
+        <li>Connectivity</li>
+        <li>IT security & compliance</li>
+      </ul>
       <div class="cubes"></div>
-
       <div class="cta"><a href="#">Are you ready for the cloud? Get your free cloud readiness report.</a></div>
-
     </section>
     <section id="nextsteps" class="content">
             <h2>The cloud advantage</h2>
