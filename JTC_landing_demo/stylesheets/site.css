@@ -125,6 +125,7 @@ section p {
 section.content ul.callout {
   width: 70%;
   margin: 0 auto;
+  text-align: center;
 }
 
 section.content ul.callout li {
