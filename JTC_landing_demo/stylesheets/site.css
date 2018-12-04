@@ -18,6 +18,22 @@ h1 {
   line-height: 1.2;
 }
 
+header {
+  display: block;
+  width: 90%;
+  margin: 10px auto 0px auto;
+  padding: 10px 0;
+}
+
+a.logo {
+  width: 200px;
+  display: block;
+}
+
+a.logo img {
+  width: 100%;
+}
+
 a.purple-btn {
   background: #8f2d56;
   color: #ffffff;
@@ -26,14 +42,24 @@ a.purple-btn {
   padding: 20px 40px;
   text-transform: capitalize;
   font-size: 20px;
+  border: 1px solid #8f2d56;
   line-height: 1.2;
   display: inline-block;
   transition: all 0.2s ease-in-out;
 }
 
+a.purple-btn.small {
+  display: block;
+  text-align: center;
+}
+a.purple-btn.small:last-of-type {
+  margin-top: 10px;
+}
+
 a.purple-btn:hover {
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-  filter: brightness(90%);
+  border: 1px solid #8f2d56;
+  background: transparent;
+  color: #8f2d56;
 }
 
 a.purple-btn i {
@@ -52,6 +78,7 @@ a.learn-more-btn {
   padding: 20px 40px;
   text-transform: capitalize;
   font-size: 20px;
+  border: 1px solid #25bbba;
   line-height: 1.2;
   display: inline-block;
   position: relative;
@@ -59,8 +86,9 @@ a.learn-more-btn {
 }
 
 a.learn-more-btn:hover {
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
-  filter: brightness(90%);
+  border: 1px solid #25bbba;
+  background: transparent;
+  color: #25bbba;
 }
 
 a.learn-more-btn i {
@@ -173,6 +201,7 @@ section.content ul.callout li:before {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 2px solid #01a8ec;
   transition: all 0.2s ease-in-out;
+  position: relative;
   &:first-child {
     margin-left: 0;
   }
@@ -221,10 +250,49 @@ section.content ul.callout li:before {
   padding: 20px 10px !important;
 }
 
+.column h2 strong {
+  font-family: NexaRegular;
+  display: block;
+}
+
 .column p {
   padding: 0 10px !important;
   font-size: 14px;
 }
+
+.column p.title {
+  margin-top: 20px;
+  padding-bottom: 60px !important;
+}
+
+.column p strong {
+  font-family: NexaBold;
+}
+
+.column a.learn-more {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 20px auto;
+  margin-left: -20%;
+  background: #24bab8;
+  color: #ffffff;
+  border: 1px solid #24bab8;
+  text-decoration: none;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 1.2;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+.column a.learn-more:hover {
+  background: transparent;
+  border: 1px solid #24bab8;
+  color: #24bab8;
+}
+
 .column ul {
   list-style-type: disc;
   text-align: left;
@@ -260,7 +328,7 @@ nav#anchor a {
   text-transform: capitalize;
   display: inline-block;
   color: #ffffff;
-  padding: 1.2%;
+  padding: 20px 2%;
   border-bottom: 3px solid transparent;
 }
 
@@ -468,7 +536,6 @@ section.content .sidebar p {
   padding: 15px 0 15px 25px;
   font-size: 14px;
   text-transform: uppercase;
-  border-bottom: 1px solid #d1dbea;
   color: #667e95;
   list-style: none;
   font-family: NexaBold;
@@ -498,10 +565,6 @@ section.content .sidebar p {
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.sidebar ul li:first-of-type {
-  border-top: 1px solid #d1dbea;
-}
-
 .float {
   float: left;
   width: 56%;
@@ -511,6 +574,34 @@ section.content .sidebar p {
 .clear {
   display: block;
   clear: both;
+}
+
+section.content ol li {
+  font-size: 16px;
+  color: #667e95;
+  padding: 10px 0;
+  line-height: 1.4; 
+  font-family: NexaRegular;
+}
+
+section.content ol li strong {
+  color: #8f2d56;
+  font-family: NexaBold;
+}
+
+section.content ol li {
+  padding-left: 1.3em;
+}
+
+section.content ol li:before {
+  content: "\f058"; /* FontAwesome Unicode */
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-style: solid;
+  color: #8f2d56;
+  margin-right: 5px;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
 }
 
 /* ==================================================== CTA */
@@ -550,8 +641,13 @@ section.content .sidebar p {
 }
 
 .cta a:hover {
-  background: #25bbba;
-  color: #ffffff;
+  border: 1px solid #01a8ec;
+  color: #01a8ec;
+}
+
+.cta.orange a:hover {
+  border: 1px solid #f09022;
+  color: #f09022;
 }
 
 .cta-illo {
@@ -596,6 +692,7 @@ a.download-text {
   background: #f09022;
   display: block;
   position: relative;
+  border: 1px solid #f09022;
   padding: 15px 20px 15px 120px;
   color: #ffffff;
   text-decoration: none;
@@ -612,8 +709,9 @@ a.download-text b {
 }
 
 a.download-text:hover {
-  background: #014282;
-  color: #ffffff;
+  background: transparent;
+  border: 1px solid #f09022;
+  color: #f09022;
 }
 
 a.download-text img {
@@ -661,6 +759,48 @@ a.download-text img {
 section#nextsteps.content {
   padding: 0;
   margin: 0 auto;
+}
+
+footer {
+  display: block;
+  width: 90%;
+  margin: 90px auto 0px auto;
+  padding: 20px 0;
+}
+
+.footer-copyright {
+  float: left;
+}
+
+.footer-copyright a {
+  color: #01a8ec;
+}
+
+.footer-copyright a:hover {
+  color: #014282;
+}
+
+footer i {
+  color: #01a8ec;
+}
+
+footer i:hover {
+  color: #014282;
+}
+
+.footer-social-icons {
+  float: right;
+  margin-top: -10px;
+}
+
+.footer-social-icons ul li {
+  display: inline;
+  font-size: 30px;
+}
+
+.footer-social-icons ul li a {
+  text-decoration: none;
+  padding-left: 20px;
 }
 
 /* ==================================================== MEDIA QUERIES */
